@@ -51,14 +51,14 @@ export default function AboutPage() {
               </motion.div>
               
               <AnimatedText
-                text="About Redhibbert"
+                text="About DigiMindsGlobal"
                 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
                 type="heading"
               />
             </div>
             
             <AnimatedText
-              text="We're a team of Salesforce experts dedicated to transforming businesses through innovative digital solutions."
+              text="We're a team of digital experts dedicated to transforming businesses through innovative web and marketing solutions."
               className="text-xl md:text-2xl text-white font-medium mb-8 max-w-2xl mx-auto"
               delay={0.1}
             />
@@ -95,7 +95,7 @@ export default function AboutPage() {
             >
               <Image
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
-                alt="Redhibbert team collaboration"
+                alt="DigiMindsGlobal team collaboration"
                 fill
                 className="object-cover"
                 priority
@@ -130,12 +130,12 @@ export default function AboutPage() {
             />
             <div className="space-y-6 max-w-3xl mx-auto">
               <AnimatedText
-                text="Founded with a vision to revolutionize digital experiences, we specialize in creating innovative solutions that transform how businesses operate in the digital age."
+                text="Founded in 2022 with a vision to revolutionize digital experiences, we specialize in creating innovative solutions that transform how businesses operate in the digital age."
                 className="text-lg text-sky-100/80 leading-relaxed"
                 delay={0.1}
               />
               <AnimatedText
-                text="Our expertise spans across modern web technologies, focusing on delivering exceptional user experiences and powerful functionality."
+                text="Our expertise spans across modern web technologies and digital marketing strategies, focusing on delivering exceptional user experiences and powerful functionality."
                 className="text-lg text-sky-100/80 leading-relaxed"
                 delay={0.2}
               />
@@ -156,10 +156,10 @@ export default function AboutPage() {
             transition={{ staggerChildren: 0.2 }}
           >
             {[
-              { year: "2015", title: "Foundation", description: "Founded our Salesforce consultancy to help businesses leverage cloud technology for digital transformation." },
-              { year: "2017", title: "Expansion", description: "Became Salesforce Silver Partner, expanding our expertise across Marketing Cloud, Service Cloud, and Commerce Cloud." },
-              { year: "2023", title: "Innovation", description: "Launched our AI-powered Salesforce solutions, helping clients automate complex customer journeys and marketing campaigns." },
-              { year: "2025", title: "Future Vision", description: "Building next-generation integrated platforms combining Salesforce with emerging technologies for comprehensive business solutions." }
+              { year: "2022", title: "Foundation", description: "Founded DigiMindsGlobal to help businesses leverage digital technology for transformation and growth." },
+              { year: "2022", title: "First Projects", description: "Successfully delivered our first web development and digital marketing projects, establishing our expertise in the field." },
+              { year: "2023", title: "Expansion", description: "Expanded our service offerings to include advanced digital solutions like e-commerce platforms and social media management." },
+              { year: "2024", title: "Future Vision", description: "Building next-generation integrated platforms combining web development and digital marketing for comprehensive business solutions." }
             ].map((item, index) => (
               <motion.div 
                 key={index}
@@ -303,7 +303,7 @@ export default function AboutPage() {
         <div className="container max-w-[1200px] mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-4 max-w-5xl mx-auto">
             {[
-              { value: "100+", label: "Projects Delivered" },
+              { value: "50+", label: "Projects Delivered" },
               { value: "99%", label: "Client Satisfaction" },
               { value: "24/7", label: "Support" },
               { value: "5⭐", label: "Average Rating" }
@@ -395,7 +395,7 @@ export default function AboutPage() {
                 type="heading"
               />
               <AnimatedText
-                text="Let's discuss how we can help you achieve your business goals with Salesforce."
+                text="Let's discuss how we can help you achieve your business goals with our digital solutions."
                 className="mb-8 text-lg max-w-2xl mx-auto"
                 delay={0.1}
               />
