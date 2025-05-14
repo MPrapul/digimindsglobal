@@ -815,35 +815,6 @@ export default function ServicesPage() {
               </div>
             </motion.div>
           </div>
-          
-          {/* Key Metrics */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8"
-          >
-            {[
-              { number: "500+", label: "Projects Delivered", icon: "📊" },
-              { number: "150+", label: "Satisfied Clients", icon: "🤝" },
-              { number: "98%", label: "On-time Delivery", icon: "⏱️" },
-              { number: "24/7", label: "Support Available", icon: "🛠️" }
-            ].map((stat, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 shadow-lg border border-[#AACBFF]/20 hover:border-[#0176D3]/30 transition-all duration-300 text-center"
-              >
-                <div className="text-3xl mb-4">{stat.icon}</div>
-                <div className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#0B5CAB] to-[#1589EE]">{stat.number}</div>
-                <div className="text-gray-600 font-medium mt-2">{stat.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
       </section>
 
