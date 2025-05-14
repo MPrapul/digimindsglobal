@@ -41,7 +41,7 @@ export function Footer() {
   return (
     <footer className="bg-[#1e2938] text-white py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
             <div className="mb-6">
@@ -133,6 +133,36 @@ export function Footer() {
               <p>Email: info@digimindsglobal.tech</p>
               <p>Office Address: Turabnagar, Amberpet, Hyderabad, India</p>
             </div>
+          </div>
+
+          {/* Newsletter Subscription */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Subscribe to Our Newsletter</h3>
+            <form onSubmit={handleNewsletterSubmit} className="space-y-4">
+              <div className="relative">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Your email address"
+                  required
+                  className="w-full rounded-lg px-4 py-3 bg-[#1a232e] text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-[#444a7d]"
+                />
+              </div>
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
+              >
+                {isSubmitting ? "Subscribing..." : "Subscribe"}
+              </button>
+              {success && (
+                <p className="text-green-500 mt-2">Thank you for subscribing!</p>
+              )}
+              {error && (
+                <p className="text-red-500 mt-2">{error}</p>
+              )}
+            </form>
           </div>
         </div>
 
