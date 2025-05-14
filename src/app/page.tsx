@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic'
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense, useState } from "react";
+import { Suspense, useState, useEffect } from "react";
 import type { ImageLoaderProps } from 'next/image'
 import ChatBot from '@/components/ChatBot'
 
@@ -35,11 +35,18 @@ const PRIORITY_IMAGES = ['/images/team-collaboration.jpg']
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState("web");
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
   
   // Image loading handler
   const handleImageLoad = () => {
     setImagesLoaded(true);
   }
+
+  // Handle manual tab selection
+  const handleCategoryChange = (category: string, index: number) => {
+    setActiveCategory(category);
+    setActiveSlide(index);
+  };
 
   return (
     <>
@@ -74,11 +81,11 @@ export default function Home() {
               </p>
             </div>
             
-            {/* Category tabs */}
+            {/* Category tabs - Enhanced with automatic slideshow indicator */}
             <div className="max-w-3xl mx-auto mb-10">
               <div className="flex justify-center bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/20">
                 <button
-                  onClick={() => setActiveCategory("web")}
+                  onClick={() => handleCategoryChange("web", 0)}
                   className={`flex-1 py-2.5 px-4 rounded-md text-sm font-medium transition-all duration-200 ${
                     activeCategory === "web"
                       ? "bg-white text-[#032D60] shadow-sm"
@@ -88,7 +95,7 @@ export default function Home() {
                   Web Design
                 </button>
                 <button
-                  onClick={() => setActiveCategory("lead")}
+                  onClick={() => handleCategoryChange("lead", 1)}
                   className={`flex-1 py-2.5 px-4 rounded-md text-sm font-medium transition-all duration-200 ${
                     activeCategory === "lead"
                       ? "bg-white text-[#032D60] shadow-sm"
@@ -98,17 +105,17 @@ export default function Home() {
                   B2B Lead Generation
                 </button>
                 <button
-                  onClick={() => setActiveCategory("software")}
+                  onClick={() => handleCategoryChange("software", 2)}
                   className={`flex-1 py-2.5 px-4 rounded-md text-sm font-medium transition-all duration-200 ${
                     activeCategory === "software"
                       ? "bg-white text-[#032D60] shadow-sm"
                       : "text-white hover:bg-white/10"
                   }`}
                 >
-                  Software Development
+                  Software Development & Testing
                 </button>
                 <button
-                  onClick={() => setActiveCategory("ux")}
+                  onClick={() => handleCategoryChange("ux", 3)}
                   className={`flex-1 py-2.5 px-4 rounded-md text-sm font-medium transition-all duration-200 ${
                     activeCategory === "ux"
                       ? "bg-white text-[#032D60] shadow-sm"
@@ -117,6 +124,30 @@ export default function Home() {
                 >
                   UI/UX Design
                 </button>
+                <button
+                  onClick={() => handleCategoryChange("social", 4)}
+                  className={`flex-1 py-2.5 px-4 rounded-md text-sm font-medium transition-all duration-200 ${
+                    activeCategory === "social"
+                      ? "bg-white text-[#032D60] shadow-sm"
+                      : "text-white hover:bg-white/10"
+                  }`}
+                >
+                  Social Media
+                </button>
+              </div>
+              
+              {/* Slideshow indicators */}
+              <div className="flex justify-center mt-4 gap-2">
+                {["web", "lead", "software", "ux", "social"].map((_, index) => (
+                  <div
+                    key={index}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      activeSlide === index 
+                        ? 'bg-white w-6' 
+                        : 'bg-white/30'
+                    }`}
+                  />
+                ))}
               </div>
             </div>
 
@@ -140,8 +171,8 @@ export default function Home() {
                         <path d="M16 16h.01"></path>
                       </svg>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">Responsive Design</h3>
-                    <p className="text-white/80 mb-6">Create beautiful websites that look and function perfectly across all devices and screen sizes.</p>
+                    <h3 className="text-xl font-bold text-white mb-3">Web Design</h3>
+                    <p className="text-white/80 mb-6">Modern, responsive websites that boost your online presence and convert visitors into customers.</p>
                     <Link href="/marketing/services/web-design" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -229,7 +260,7 @@ export default function Home() {
                       </svg>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">B2B Lead Generation</h3>
-                    <p className="text-white/80 mb-6">Strategic campaigns designed to attract high-quality leads that convert into valuable business relationships.</p>
+                    <p className="text-white/80 mb-6">Attract high-quality business leads through targeted marketing campaigns and strategic outreach.</p>
                     <Link href="/marketing/services/lead-generation" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -253,8 +284,8 @@ export default function Home() {
                       </svg>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">Social Media Management</h3>
-                    <p className="text-white/80 mb-6">Build your brand and engage with your audience through strategic social media management services.</p>
-                    <Link href="/marketing/services/lead-generation" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                    <p className="text-white/80 mb-6">Build brand awareness and engagement through strategic social media presence and content.</p>
+                    <Link href="/marketing/services/social-media" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6" />
@@ -485,8 +516,8 @@ export default function Home() {
                         <polyline points="8 6 2 12 8 18"></polyline>
                       </svg>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">Custom Software</h3>
-                    <p className="text-white/80 mb-6">Build tailored software solutions that address your specific business needs and provide a competitive edge.</p>
+                    <h3 className="text-xl font-bold text-white mb-3">Software Development</h3>
+                    <p className="text-white/80 mb-6">Custom software solutions and mobile apps built with quality assurance and testing for reliable results.</p>
                     <Link href="/marketing/services/software-development" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -511,7 +542,7 @@ export default function Home() {
                         <path d="M12 18h.01"></path>
                       </svg>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">Mobile Apps</h3>
+                    <h3 className="text-xl font-bold text-white mb-3">Mobile App Development</h3>
                     <p className="text-white/80 mb-6">Create powerful, user-friendly mobile applications that extend your business reach and enhance engagement.</p>
                     <Link href="/marketing/services/software-development" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
@@ -538,7 +569,7 @@ export default function Home() {
                         <circle cx="7" cy="7" r="3"></circle>
                       </svg>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">Quality Assurance</h3>
+                    <h3 className="text-xl font-bold text-white mb-3">Software Testing & QA</h3>
                     <p className="text-white/80 mb-6">Ensure your software meets the highest standards with our comprehensive testing and QA services.</p>
                     <Link href="/marketing/services/software-development" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
@@ -641,6 +672,87 @@ export default function Home() {
               </div>
             )}
             
+            {/* Social Media Management Services */}
+            {activeCategory === "social" && (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                {/* Service Card - Social Media Strategy */}
+                <div className="group relative bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden border border-white/20 transition-all duration-300 hover:bg-white/15 hover:border-white/30 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+                  <div className="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-40 transition-opacity">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16 text-white">
+                      <path fillRule="evenodd" d="M4.848 2.771A49.144 49.144 0 0 1 12 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97-1.94.284-3.916.455-5.922.505a.39.39 0 0 0-.266.112L8.78 21.53A.75.75 0 0 1 7.5 21v-3.955a48.842 48.842 0 0 1-2.652-.316c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97Z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="p-6 md:p-8">
+                    <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-[#4F46E5] to-[#7C3AED] text-white rounded-lg mb-5 shadow-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">Social Media Strategy</h3>
+                    <p className="text-white/80 mb-6">Build a strategic social media plan to boost your brand's online presence and engagement.</p>
+                    <Link href="/marketing/services/lead-generation" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                      Learn More
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+                
+                {/* Service Card - Content Creation */}
+                <div className="group relative bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden border border-white/20 transition-all duration-300 hover:bg-white/15 hover:border-white/30 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+                  <div className="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-40 transition-opacity">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16 text-white">
+                      <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-8.4 8.4a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32l8.4-8.4Z" />
+                      <path d="M5.25 5.25a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3V13.5a.75.75 0 0 0-1.5 0v5.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5V8.25a1.5 1.5 0 0 1 1.5-1.5h5.25a.75.75 0 0 0 0-1.5H5.25Z" />
+                    </svg>
+                  </div>
+                  <div className="p-6 md:p-8">
+                    <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-[#4F46E5] to-[#7C3AED] text-white rounded-lg mb-5 shadow-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                        <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                        <path d="M2 2l7.586 7.586"></path>
+                        <circle cx="11" cy="11" r="2"></circle>
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">Content Creation</h3>
+                    <p className="text-white/80 mb-6">Develop engaging, high-quality content that resonates with your audience and drives engagement.</p>
+                    <Link href="/marketing/services/lead-generation" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                      Learn More
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+                
+                {/* Service Card - Social Media Advertising */}
+                <div className="group relative bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden border border-white/20 transition-all duration-300 hover:bg-white/15 hover:border-white/30 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+                  <div className="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-40 transition-opacity">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16 text-white">
+                      <path fillRule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 0 1 .75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 0 1 9.75 22.5a.75.75 0 0 1-.75-.75v-4.131A15.838 15.838 0 0 1 6.382 15H2.25a.75.75 0 0 1-.75-.75 6.75 6.75 0 0 1 7.815-6.666ZM15 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="p-6 md:p-8">
+                    <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-[#4F46E5] to-[#7C3AED] text-white rounded-lg mb-5 shadow-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">Social Media Ads</h3>
+                    <p className="text-white/80 mb-6">Reach your target audience and drive conversions with targeted social media advertising campaigns.</p>
+                    <Link href="/marketing/services/lead-generation" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                      Learn More
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            )}
+            
             {/* View All Services Button */}
             <div className="mt-12 text-center">
               <Link href="/marketing/services" className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm text-white border border-white/30 px-6 py-3 rounded-lg font-medium hover:bg-white/20 transition-all duration-300 group">
@@ -722,8 +834,8 @@ export default function Home() {
             {/* Features Grid */}
             <div className="mt-24">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <Link href="marketing/services/web-design" className="block">
-                  <div className="bg-white p-6 rounded-lg shadow-md border border-[#b4c8e1] hover:shadow-lg hover:border-[#0176D3]/30 transition-all duration-300 group">
+                <Link href="/marketing/services/web-design" className="block">
+                  <div className="bg-white p-6 rounded-lg shadow-md border border-[#b4c8e1] hover:shadow-lg hover:border-[#0176D3]/30 transition-all duration-300 group h-full">
                     <div className="text-[#0176D3] text-4xl mb-4 flex justify-center">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16 transform group-hover:scale-110 transition-transform duration-300">
                         <path fillRule="evenodd" d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 0 0 3 3h15a3 3 0 0 1-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125ZM12 9.75a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5H12Zm-.75-2.25a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5H12a.75.75 0 0 1-.75-.75ZM6 12.75a.75.75 0 0 0 0 1.5h7.5a.75.75 0 0 0 0-1.5H6Zm-.75 3.75a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1-.75-.75ZM6 6.75a.75.75 0 0 0-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75v-3A.75.75 0 0 0 9 6.75H6Z" clipRule="evenodd" />
@@ -735,36 +847,32 @@ export default function Home() {
                   </div>
                 </Link>
 
-                <Link href="marketing/services/lead-generation" className="block">
-                  <div className="bg-white p-6 rounded-lg shadow-md border border-[#b4c8e1] hover:shadow-lg hover:border-[#0176D3]/30 transition-all duration-300 group">
+                <Link href="/marketing/services/digital-marketing" className="block">
+                  <div className="bg-white p-6 rounded-lg shadow-md border border-[#b4c8e1] hover:shadow-lg hover:border-[#0176D3]/30 transition-all duration-300 group h-full">
                     <div className="text-[#0176D3] text-4xl mb-4 flex justify-center">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16 transform group-hover:scale-110 transition-transform duration-300">
-                        <path d="M21 6.375c0 2.692-4.03 4.875-9 4.875S3 9.067 3 6.375 7.03 1.5 12 1.5s9 2.183 9 4.875Z" />
-                        <path d="M12 12.75c2.685 0 5.19-.586 7.078-1.609a8.283 8.283 0 0 0 1.897-1.384c.016.121.025.244.025.368C21 12.817 16.97 15 12 15s-9-2.183-9-4.875c0-.124.009-.247.025-.368a8.285 8.285 0 0 0 1.897 1.384C6.809 12.164 9.315 12.75 12 12.75Z" />
-                        <path d="M12 16.5c2.685 0 5.19-.586 7.078-1.609a8.282 8.282 0 0 0 1.897-1.384c.016.121.025.244.025.368 0 2.692-4.03 4.875-9 4.875s-9-2.183-9-4.875c0-.124.009-.247.025-.368a8.284 8.284 0 0 0 1.897 1.384C6.809 15.914 9.315 16.5 12 16.5Z" />
-                        <path d="M12 20.25c2.685 0 5.19-.586 7.078-1.609a8.282 8.282 0 0 0 1.897-1.384c.016.121.025.244.025.368 0 2.692-4.03 4.875-9 4.875s-9-2.183-9-4.875c0-.124.009-.247.025-.368a8.284 8.284 0 0 0 1.897 1.384C6.809 19.664 9.315 20.25 12 20.25Z" />
+                        <path d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75ZM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 0 1-1.875-1.875V8.625ZM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 0 1 3 19.875v-6.75Z" />
                       </svg>
                     </div>
-                    <h3 className="text-lg font-bold text-[#032D60] text-center mb-2 group-hover:text-[#0176D3] transition-colors duration-300">Data Cloud</h3>
-                    <p className="text-gray-600 text-center">Unified customer data for personalized experiences</p>
+                    <h3 className="text-lg font-bold text-[#032D60] text-center mb-2 group-hover:text-[#0176D3] transition-colors duration-300">Digital Marketing</h3>
+                    <p className="text-gray-600 text-center">Strategic digital campaigns that drive traffic and increase conversions</p>
                   </div>
                 </Link>
 
-                <Link href="marketing/services/marketing-cloud/email-studio" className="block">
-                  <div className="bg-white p-6 rounded-lg shadow-md border border-[#b4c8e1] hover:shadow-lg hover:border-[#0176D3]/30 transition-all duration-300 group">
+                <Link href="/marketing/services/social-media" className="block">
+                  <div className="bg-white p-6 rounded-lg shadow-md border border-[#b4c8e1] hover:shadow-lg hover:border-[#0176D3]/30 transition-all duration-300 group h-full">
                     <div className="text-[#0176D3] text-4xl mb-4 flex justify-center">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16 transform group-hover:scale-110 transition-transform duration-300">
-                        <path d="M19.5 22.5a3 3 0 0 0 3-3v-8.174l-6.879 4.022 3.485 1.876a.75.75 0 1 1-.712 1.321l-5.683-3.06a1.5 1.5 0 0 0-1.422 0l-5.683 3.06a.75.75 0 0 1-.712-1.32l3.485-1.877L1.5 11.326V19.5a3 3 0 0 0 3 3h15Z" />
-                        <path d="M1.5 9.589v-.745a3 3 0 0 1 1.578-2.642l7.5-4.038a3 3 0 0 1 2.844 0l7.5 4.038A3 3 0 0 1 22.5 8.844v.745l-8.426 4.926-.652-.351a3 3 0 0 0-2.844 0l-.652.351L1.5 9.589Z" />
+                        <path fillRule="evenodd" d="M4.848 2.771A49.144 49.144 0 0 1 12 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97-1.94.284-3.916.455-5.922.505a.39.39 0 0 0-.266.112L8.78 21.53A.75.75 0 0 1 7.5 21v-3.955a48.842 48.842 0 0 1-2.652-.316c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97Z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <h3 className="text-lg font-bold text-[#032D60] text-center mb-2 group-hover:text-[#0176D3] transition-colors duration-300">Email Studio</h3>
-                    <p className="text-gray-600 text-center">Targeted email campaigns that drive engagement</p>
+                    <h3 className="text-lg font-bold text-[#032D60] text-center mb-2 group-hover:text-[#0176D3] transition-colors duration-300">Social Media Management</h3>
+                    <p className="text-gray-600 text-center">Build brand awareness and engagement through strategic social media presence</p>
                   </div>
                 </Link>
 
-                <Link href="marketing/services/ux-design" className="block">
-                  <div className="bg-white p-6 rounded-lg shadow-md border border-[#b4c8e1] hover:shadow-lg hover:border-[#0176D3]/30 transition-all duration-300 group">
+                <Link href="/marketing/services/ux-design" className="block">
+                  <div className="bg-white p-6 rounded-lg shadow-md border border-[#b4c8e1] hover:shadow-lg hover:border-[#0176D3]/30 transition-all duration-300 group h-full">
                     <div className="text-[#0176D3] text-4xl mb-4 flex justify-center">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16 transform group-hover:scale-110 transition-transform duration-300">
                         <path d="M9.97 2.28a1.5 1.5 0 0 1 1.06 0l9.5 3.5A1.5 1.5 0 0 1 21.5 7.16v9.68a1.5 1.5 0 0 1-.97 1.38l-9.5 3.5a1.5 1.5 0 0 1-1.06 0l-9.5-3.5a1.5 1.5 0 0 1-.97-1.38V7.16a1.5 1.5 0 0 1 .97-1.38l9.5-3.5ZM10.5 5.15 4.89 7.4l5.61 2.25 5.61-2.25L10.5 5.15Zm-7 5.17v5.34l7 2.58v-5.34l-7-2.58Zm9 7.92 7-2.58V10.32l-7 2.58v5.34Z" />
@@ -779,88 +887,94 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Data Cloud Training Section - NEW */}
-        <section className="py-20 bg-gradient-to-br from-[#f8fbff] to-white">
+        {/* Industries We Serve Section */}
+        <section className="bg-gradient-to-b from-white to-[#f8fbff] py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="flex flex-col lg:flex-row items-center gap-12">
-                {/* Image Side */}
-                <div className="lg:w-2/5">
-                  <div className="relative rounded-xl overflow-hidden shadow-xl">
-                    <div className="aspect-w-4 aspect-h-3 w-full">
-                      <Image 
-                        src="/images/data-cloud.jpg"
-                        alt="Salesforce Data Cloud Training"
-                        width={600}
-                        height={450}
-                        className={`object-cover w-full h-full ${
-                          imagesLoaded ? 'opacity-100' : 'opacity-0'
-                        }`}
-                        loading="lazy"
-                        onLoad={handleImageLoad}
-                        loader={imageLoader}
-                        placeholder="blur"
-                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQrJyEkKSQ7Oy0tLTstO0RBPUE0QTtBOz1FSUlFPU5VUVVOSkVJSUj/2wBDAR"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#032D60]/80 to-transparent"></div>
-                    </div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <div className="inline-block bg-[#0176D3] text-white text-sm font-medium px-3 py-1 rounded-full mb-2">
-                        Certification Courses
-                      </div>
-                    </div>
-                  </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#333]">Industries We Serve</h2>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Banking & Finance */}
+              <div className="bg-white rounded-lg shadow-md border border-gray-200 p-6 flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:border-[#0176D3]/30">
+                <div className="w-20 h-20 mb-4 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-16 h-16 text-[#444a7d]">
+                    <path fill="currentColor" d="M12 3L4 9v12h16V9l-8-6zm0 2.25L17 9v10H7V9l5-3.75zM6 14h2v4H6v-4zm5 0h2v4h-2v-4zm5 0h2v4h-2v-4z"/>
+                  </svg>
                 </div>
-                
-                {/* Content Side */}
-                <div className="lg:w-3/5">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#032D60]">
-                    Data Cloud Training & Certification
-                  </h2>
-                  <p className="text-gray-700 mb-6 text-lg">
-                    Elevate your career with specialized Salesforce Data Cloud training. Our comprehensive 
-                    programs are designed to help you master data unification, audience segmentation, 
-                    and personalization at scale.
-                  </p>
-                  
-                  <div className="space-y-4 mb-8">
-                    {/* Training Features */}
-                    {[
-                      {
-                        title: "Certified Instructors",
-                        description: "Learn from Data Cloud experts with real-world implementation experience"
-                      },
-                      {
-                        title: "Hands-on Workshops",
-                        description: "Build practical skills with guided exercises and real-world scenarios"
-                      },
-                      {
-                        title: "Certification Preparation",
-                        description: "Comprehensive curriculum aligned with Salesforce certification requirements"
-                      }
-                    ].map((feature, index) => (
-                      <div key={index} className="flex items-start">
-                        <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#0176D3] flex items-center justify-center mt-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <div className="ml-3">
-                          <h4 className="text-[#032D60] font-semibold">{feature.title}</h4>
-                          <p className="text-gray-600">{feature.description}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <Link href="/training" className="inline-flex items-center bg-[#0176D3] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#0165b8] transition-all">
-                    Explore Training Programs
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M5 12h14"/>
-                      <path d="m12 5 7 7-7 7"/>
-                    </svg>
-                  </Link>
+                <h3 className="text-lg font-bold text-[#444a7d] text-center">Banking & Finance</h3>
+              </div>
+
+              {/* Food and Beverage */}
+              <div className="bg-white rounded-lg shadow-md border border-gray-200 p-6 flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:border-[#0176D3]/30">
+                <div className="w-20 h-20 mb-4 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-16 h-16 text-[#444a7d]">
+                    <path fill="currentColor" d="M2 19h20l-2-8H4l-2 8zm18-10H4c0-4.42 3.58-8 8-8s8 3.58 8 8z"/>
+                  </svg>
                 </div>
+                <h3 className="text-lg font-bold text-[#444a7d] text-center">Food and Beverage</h3>
+              </div>
+
+              {/* E-Commerce */}
+              <div className="bg-white rounded-lg shadow-md border border-gray-200 p-6 flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:border-[#0176D3]/30">
+                <div className="w-20 h-20 mb-4 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-16 h-16 text-[#444a7d]">
+                    <path fill="currentColor" d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM17 18c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zM8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21 4H5.5L4.5 2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2z"/>
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-[#444a7d] text-center">E-Commerce</h3>
+              </div>
+
+              {/* Real Estate */}
+              <div className="bg-white rounded-lg shadow-md border border-gray-200 p-6 flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:border-[#0176D3]/30">
+                <div className="w-20 h-20 mb-4 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-16 h-16 text-[#444a7d]">
+                    <path fill="currentColor" d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 13L3 10.53v5.96l9 5.48 9-4.93v-5.96L12 16z"/>
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-[#444a7d] text-center">Real Estate</h3>
+              </div>
+
+              {/* Fashion & Lifestyle */}
+              <div className="bg-white rounded-lg shadow-md border border-gray-200 p-6 flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:border-[#0176D3]/30">
+                <div className="w-20 h-20 mb-4 text-[#444a7d]">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-[#444a7d] text-center">Fashion & Lifestyle</h3>
+              </div>
+
+              {/* Logistic Transport */}
+              <div className="bg-white rounded-lg shadow-md border border-gray-200 p-6 flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:border-[#0176D3]/30">
+                <div className="w-20 h-20 mb-4 text-[#444a7d]">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3.375 4.5C2.339 4.5 1.5 5.34 1.5 6.375V13.5h12V6.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM13.5 15h-12v2.625c0 1.035.84 1.875 1.875 1.875h.375a3 3 0 116 0h3a.75.75 0 00.75-.75V15z" />
+                    <path d="M8.25 19.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0zM15.75 6.75a.75.75 0 00-.75.75v11.25c0 .087.015.17.042.248a3 3 0 015.958.464c.853-.175 1.522-.935 1.464-1.883a18.659 18.659 0 00-3.732-10.104 1.837 1.837 0 00-1.47-.725H15.75z" />
+                    <path d="M19.5 19.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-[#444a7d] text-center">Logistic Transport</h3>
+              </div>
+
+              {/* Education */}
+              <div className="bg-white rounded-lg shadow-md border border-gray-200 p-6 flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:border-[#0176D3]/30">
+                <div className="w-20 h-20 mb-4 text-[#444a7d]">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z" />
+                    <path d="M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z" />
+                    <path d="M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 01-1.06-1.06Z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-[#444a7d] text-center">Education</h3>
+              </div>
+
+              {/* Healthcare */}
+              <div className="bg-white rounded-lg shadow-md border border-gray-200 p-6 flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:border-[#0176D3]/30">
+                <div className="w-20 h-20 mb-4 text-[#444a7d]">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-[#444a7d] text-center">Healthcare</h3>
               </div>
             </div>
           </div>

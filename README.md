@@ -1,5 +1,5 @@
 # DigiMindsGlobal Website
-A modern, responsive website for DigiMindsGlobal, showcasing Web Design, B2B Lead Generation, Software Development, UI/UX Design, Social Media Management, and Digital Marketing services.
+A modern, responsive website for DigiMindsGlobal, showcasing Web Design, Lead Generation, Software Development, UI/UX Design, Social Media Management, and Digital Marketing services.
 
 ## Tech Stack Used
 - Next.js 15
@@ -11,10 +11,12 @@ A modern, responsive website for DigiMindsGlobal, showcasing Web Design, B2B Lea
 - Vercel Analytics
 
 ## Recent Updates
-- Added "Industries We Serve" section featuring Banking & Finance, Food and Beverage, E-Commerce, Real Estate, Fashion & Lifestyle, Logistic Transport, Education, and Healthcare sectors with custom icons
-- Modified "Trusted by Leading Organizations" section spacing for better UI flow
-- Improved tab navigation in the Services section with dedicated tabs for Web Design, B2B Lead Generation & Social Media, Software Development & Testing, and UI/UX Design
-- Enhanced card layouts with consistent heights using Tailwind's h-full property
+- Redesigned "Industries We Serve" section with simplified, cleaner icons and an improved color scheme that matches the website's branding
+- Changed the background of the Industries section to a subtle white-to-light-blue gradient for better visual consistency
+- Added Digital Marketing and Social Media Management service cards to replace B2B Lead Generation and Software Development cards
+- Created dedicated service pages for Digital Marketing and Social Media Management
+- Fixed card height alignment issues throughout the site using Tailwind's h-full property
+- Removed the Data Cloud Training & Certification section from the homepage
 
 ## Getting Started
 1. Clone the repository:
@@ -52,7 +54,7 @@ src/
 │   │   ├── contact/        # Contact page
 │   │   └── services/       # Services pages
 │   │       ├── web-design/         # Web Design services
-│   │       ├── lead-generation/    # B2B Lead Generation services
+│   │       ├── digital-marketing/  # Digital Marketing services
 │   │       ├── software-development/ # Software Development services
 │   │       ├── ux-design/          # UI/UX Design services
 │   │       └── social-media/       # Social Media Management services
@@ -95,13 +97,13 @@ public/                   # Static assets
   - Responsive Design for All Devices
   - Website Maintenance & Support
 
-- **B2B Lead Generation**
-  - Targeted Lead Acquisition Strategies
-  - Email & LinkedIn Outreach Campaigns
-  - Data-Driven Lead Scoring
-  - Maximizing Conversions with Smart Engagement
-  - CRM Integration & Management
-  - Lead Nurturing & Follow-up Automation
+- **Digital Marketing**
+  - Search Engine Optimization (SEO)
+  - Pay-Per-Click (PPC) Campaigns
+  - Content Marketing Strategies
+  - Analytics & Performance Tracking
+  - Conversion Rate Optimization
+  - Marketing Automation
 
 - **Software Development & Testing**
   - Custom Software Solutions
@@ -119,13 +121,13 @@ public/                   # Static assets
   - Design Systems & Style Guides
   - Usability Testing & Optimization
 
-- **Social Media Management & Digital Marketing**
-  - Content Creation & Strategy
+- **Social Media Management**
+  - Social Media Strategy Development
+  - Content Creation & Curation
   - Social Media Advertising
-  - Brand Engagement & Growth
-  - SEO & Content Optimization
-  - PPC & Paid Advertising Campaigns
-  - Email Marketing Campaigns
+  - Community Management & Engagement
+  - Performance Analytics & Reporting
+  - Influencer Collaboration Campaigns
 
 ## Industries We Serve
 - Banking & Finance
