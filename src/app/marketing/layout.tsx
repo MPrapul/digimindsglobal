@@ -5,9 +5,9 @@ import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 
 const serviceLinks = [
-  { name: 'Marketing Cloud', href: '/marketing/services/marketing-cloud' },
-  { name: 'Data Cloud', href: '/marketing/services/data-cloud' },
-  { name: 'AI/CRM Solutions', href: '/marketing/services/ai-crm' },
+  { name: 'Web Development', href: '/marketing/services/web-development' },
+  { name: 'Digital Marketing', href: '/marketing/services/digital-marketing' },
+  { name: 'Software Development', href: '/marketing/services/software-development' },
 ]
 
 export default function MarketingLayout({
@@ -32,15 +32,15 @@ export default function MarketingLayout({
                   href={link.href}
                   className={`relative px-4 py-2 text-sm font-medium transition-colors ${
                     isActive 
-                      ? 'text-[#0176D3]' 
-                      : 'text-gray-600 hover:text-[#0176D3]'
+                      ? 'text-[#444a7d]' 
+                      : 'text-gray-600 hover:text-[#444a7d]'
                   }`}
                 >
                   {link.name}
                   {isActive && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#0176D3]"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#444a7d]"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}

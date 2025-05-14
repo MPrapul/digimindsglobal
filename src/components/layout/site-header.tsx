@@ -27,8 +27,8 @@ export function SiteHeader() {
         </div>
         <div className="flex items-center space-x-4 ml-auto">
           <div className="hidden md:block">
-            <Button asChild className="rounded-md px-6 py-2 font-medium">
-              <Link href="/contact">Get in Touch</Link>
+            <Button asChild className="rounded-md px-6 py-2 font-medium bg-[#444a7d] hover:bg-[#363c64] text-white">
+              <Link href="/contact">Contact Us</Link>
             </Button>
           </div>
           <div className="lg:hidden">

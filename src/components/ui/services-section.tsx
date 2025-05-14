@@ -2,19 +2,19 @@ import Link from "next/link";
 
 const services = [
   {
-    title: "Marketing Cloud",
-    description: "Create personalized customer journeys and deliver targeted campaigns across all channels.",
-    icon: "🎯",
+    title: "Web Development",
+    description: "Create professional, responsive websites that showcase your brand and attract customers.",
+    icon: "🌐",
   },
   {
-    title: "Data Cloud",
-    description: "Unify customer data across systems and create a single source of truth for better insights.",
-    icon: "📊",
+    title: "Digital Marketing",
+    description: "Grow your online presence with SEO, content marketing, and social media strategies.",
+    icon: "📱",
   },
   {
-    title: "AI/CRM Solutions",
-    description: "Leverage AI-powered analytics and automation to enhance customer engagement.",
-    icon: "🤖",
+    title: "Software Development",
+    description: "Custom software solutions designed to streamline your business processes and improve efficiency.",
+    icon: "💻",
   },
 ];
 

@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { ToolsDropdown } from "./tools-dropdown";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,13 +30,6 @@ export function Navbar() {
             <Link href="/marketing/services" className="text-gray-700 hover:text-primary font-medium">
               Services
             </Link>
-            <ToolsDropdown />
-            <Link href="/marketing/industries" className="text-gray-700 hover:text-primary font-medium">
-              Industries
-            </Link>
-            <Link href="/training" className="text-gray-700 hover:text-primary font-medium">
-              Training
-            </Link>
             <Link href="/about" className="text-gray-700 hover:text-primary font-medium">
               About Us
             </Link>
@@ -49,7 +41,7 @@ export function Navbar() {
             </Link>
             <Link
               href="/marketing/contact"
-              className="bg-primary text-white px-6 py-2.5 rounded-md hover:bg-primary/90 transition-colors font-medium"
+              className="bg-[#444a7d] hover:bg-[#363c64] text-white px-6 py-2.5 rounded-md transition-colors font-medium"
             >
               Contact Us
             </Link>
@@ -84,27 +76,6 @@ export function Navbar() {
               Services
             </Link>
             <Link 
-              href="/tools" 
-              className="text-gray-700 hover:text-primary py-2 font-medium"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Tools
-            </Link>
-            <Link 
-              href="/marketing/industries" 
-              className="text-gray-700 hover:text-primary py-2 font-medium"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Industries
-            </Link>
-            <Link 
-              href="/training" 
-              className="text-gray-700 hover:text-primary py-2 font-medium"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Training
-            </Link>
-            <Link 
               href="/about" 
               className="text-gray-700 hover:text-primary py-2 font-medium"
               onClick={() => setMobileMenuOpen(false)}
@@ -127,7 +98,7 @@ export function Navbar() {
             </Link>
             <Link
               href="/marketing/contact"
-              className="bg-primary text-white px-6 py-2.5 rounded-md hover:bg-primary/90 transition-colors inline-block w-fit font-medium"
+              className="bg-[#444a7d] hover:bg-[#363c64] text-white px-6 py-2.5 rounded-md transition-colors inline-block w-fit font-medium"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact Us

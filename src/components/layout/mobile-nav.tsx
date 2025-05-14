@@ -21,24 +21,16 @@ const mainNavItems = [
     href: '/services',
   },
   {
-    title: 'Tools',
-    href: '/tools',
-  },
-  {
-    title: 'Industries',
-    href: '/industries',
-  },
-  {
-    title: 'Case Studies',
-    href: '/case-studies',
-  },
-  {
-    title: 'About',
+    title: 'About Us',
     href: '/about',
   },
   {
     title: 'Blog',
     href: '/blog',
+  },
+  {
+    title: 'Careers',
+    href: '/careers',
   },
 ]
 
