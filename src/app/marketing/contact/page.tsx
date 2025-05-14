@@ -361,13 +361,13 @@ function ContactForm() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
               </span>
-              Welcome to Red Hibbert Group
+              Welcome to DigiMindsGlobal
             </span>
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl bg-clip-text">
               Let&apos;s Connect
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-gray-300/90 leading-relaxed">
-              Transform your business with our expert Salesforce solutions. We&apos;re here to help you succeed and drive your digital transformation journey.
+              Transform your business with our expert digital marketing and web development services. We&apos;re here to help you succeed and drive your digital transformation journey.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
               <Button variant="default" size="lg" className="group bg-white text-[#0f172a] hover:bg-gray-100 hover:scale-105 transform transition-all duration-200">
@@ -523,8 +523,8 @@ function ContactForm() {
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-[#0f172a]">Phone</h3>
                 <p className="text-gray-600 mb-2">Mon-Fri from 8am to 5pm</p>
-                <a href="tel:+1 732-734-8282" className="text-[#0f172a] hover:underline font-medium">
-                  +1 732-734-8282
+                <a href="tel:6304647593" className="text-[#0f172a] hover:underline font-medium">
+                  6304647593
                 </a>
               </div>
             </motion.div>
@@ -539,8 +539,8 @@ function ContactForm() {
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-[#0f172a]">Email</h3>
                 <p className="text-gray-600 mb-2">Our friendly team is here to help.</p>
-                <a href="mailto:contact@redhibbert.com" className="text-[#0f172a] hover:underline font-medium">
-                  contact@redhibbert.com
+                <a href="mailto:info@digimindsglobal.tech" className="text-[#0f172a] hover:underline font-medium">
+                  info@digimindsglobal.tech
                 </a>
               </div>
             </motion.div>
@@ -556,7 +556,7 @@ function ContactForm() {
                 <h3 className="mb-2 text-lg font-semibold text-[#0f172a]">Office</h3>
                 <p className="text-gray-600 mb-2">Come say hello at our office.</p>
                 <p className="text-[#0f172a] font-medium">
-                3001 Bishop Dr, Suite 300 San Ramon, CA 94583
+                Turabnagar, Amberpet, Hyderabad, India
                 </p>
               </div>
             </motion.div>
@@ -699,7 +699,7 @@ function ContactForm() {
                           className="mt-1 h-4 w-4 rounded border-gray-300"
                         />
                         <label className="text-sm text-gray-600">
-                          I agree to receive SMS messages from Red Hibbert Group.
+                          I agree to receive SMS messages from DigiMindsGlobal.
                         </label>
                       </div>
                       <div className="flex items-start space-x-2">
@@ -708,7 +708,7 @@ function ContactForm() {
                           className="mt-1 h-4 w-4 rounded border-gray-300"
                         />
                         <label className="text-sm text-gray-600">
-                          I agree to receive marketing emails from Red Hibbert Group.
+                          I agree to receive marketing emails from DigiMindsGlobal.
                         </label>
                       </div>
                       <div className="flex flex-col space-y-2">
@@ -777,7 +777,7 @@ function ContactForm() {
               Subscribe to Our Newsletter
             </h2>
             <p className="mb-8 text-lg text-gray-300/90">
-              Stay updated with our latest insights and news about Salesforce solutions.
+              Stay updated with our latest insights and news about digital marketing and web development.
             </p>
             <form onSubmit={handleNewsletterSubmit} className="relative mx-auto max-w-md">
               <AnimatePresence mode="wait">

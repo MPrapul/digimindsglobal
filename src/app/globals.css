@@ -197,3 +197,13 @@ html {
 .animate-pulse-blue {
   animation: pulse-blue 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
+/* Hide scrollbar but maintain scrolling functionality */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}

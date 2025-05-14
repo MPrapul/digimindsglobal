@@ -83,10 +83,10 @@ export default function Home() {
             
             {/* Category tabs - Enhanced with automatic slideshow indicator */}
             <div className="max-w-3xl mx-auto mb-10">
-              <div className="flex justify-center bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/20">
+              <div className="flex overflow-x-auto md:overflow-visible pb-2 md:pb-0 bg-white/10 backdrop-blur-sm rounded-lg p-1.5 border border-white/20 no-scrollbar">
                 <button
                   onClick={() => handleCategoryChange("web", 0)}
-                  className={`flex-1 py-2.5 px-4 rounded-md text-sm font-medium transition-all duration-200 ${
+                  className={`whitespace-nowrap min-w-[100px] md:flex-1 py-2.5 px-3 md:px-4 rounded-md text-xs md:text-sm font-medium transition-all duration-200 ${
                     activeCategory === "web"
                       ? "bg-white text-[#032D60] shadow-sm"
                       : "text-white hover:bg-white/10"
@@ -96,7 +96,7 @@ export default function Home() {
                 </button>
                 <button
                   onClick={() => handleCategoryChange("lead", 1)}
-                  className={`flex-1 py-2.5 px-4 rounded-md text-sm font-medium transition-all duration-200 ${
+                  className={`whitespace-nowrap min-w-[140px] md:flex-1 py-2.5 px-3 md:px-4 rounded-md text-xs md:text-sm font-medium transition-all duration-200 ${
                     activeCategory === "lead"
                       ? "bg-white text-[#032D60] shadow-sm"
                       : "text-white hover:bg-white/10"
@@ -106,17 +106,17 @@ export default function Home() {
                 </button>
                 <button
                   onClick={() => handleCategoryChange("software", 2)}
-                  className={`flex-1 py-2.5 px-4 rounded-md text-sm font-medium transition-all duration-200 ${
+                  className={`whitespace-nowrap min-w-[170px] md:flex-1 py-2.5 px-3 md:px-4 rounded-md text-xs md:text-sm font-medium transition-all duration-200 ${
                     activeCategory === "software"
                       ? "bg-white text-[#032D60] shadow-sm"
                       : "text-white hover:bg-white/10"
                   }`}
                 >
-                  Software Development & Testing
+                  Software Development
                 </button>
                 <button
                   onClick={() => handleCategoryChange("ux", 3)}
-                  className={`flex-1 py-2.5 px-4 rounded-md text-sm font-medium transition-all duration-200 ${
+                  className={`whitespace-nowrap min-w-[100px] md:flex-1 py-2.5 px-3 md:px-4 rounded-md text-xs md:text-sm font-medium transition-all duration-200 ${
                     activeCategory === "ux"
                       ? "bg-white text-[#032D60] shadow-sm"
                       : "text-white hover:bg-white/10"
@@ -126,7 +126,7 @@ export default function Home() {
                 </button>
                 <button
                   onClick={() => handleCategoryChange("social", 4)}
-                  className={`flex-1 py-2.5 px-4 rounded-md text-sm font-medium transition-all duration-200 ${
+                  className={`whitespace-nowrap min-w-[100px] md:flex-1 py-2.5 px-3 md:px-4 rounded-md text-xs md:text-sm font-medium transition-all duration-200 ${
                     activeCategory === "social"
                       ? "bg-white text-[#032D60] shadow-sm"
                       : "text-white hover:bg-white/10"
