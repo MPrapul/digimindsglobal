@@ -22,41 +22,41 @@ interface Category {
 }
 
 const categories: Category[] = [
-  { name: "Banking", count: 12, icon: "/images/icons/banking.svg" },
-  { name: "Healthcare", count: 8, icon: "/images/icons/healthcare.svg" },
-  { name: "Marketing Cloud", count: 15, icon: "/images/icons/marketing-cloud.svg" },
-  { name: "Data Cloud", count: 10, icon: "/images/icons/data-cloud.svg" },
-  { name: "Journey Builder", count: 7, icon: "/images/icons/journey-builder.svg" },
-  { name: "Email Studio", count: 9, icon: "/images/icons/email-studio.svg" },
+  { name: "Web Development", count: 12, icon: "/images/icons/banking.svg" },
+  { name: "Digital Marketing", count: 15, icon: "/images/icons/marketing-cloud.svg" },
+  { name: "UI/UX Design", count: 8, icon: "/images/icons/healthcare.svg" },
+  { name: "E-Commerce", count: 10, icon: "/images/icons/data-cloud.svg" },
+  { name: "SEO & Analytics", count: 9, icon: "/images/icons/email-studio.svg" },
+  { name: "Social Media", count: 7, icon: "/images/icons/journey-builder.svg" },
 ];
 
 const featuredPosts: Post[] = [
   {
-    title: "The Future of Digital Banking: Trends to Watch in 2024",
-    excerpt: "Explore the latest trends shaping the future of digital banking and how Salesforce solutions are driving innovation in customer engagement and personalized experiences.",
+    title: "The Future of Web Development: Trends to Watch in 2024",
+    excerpt: "Explore the latest trends shaping the future of web development and how modern frameworks and technologies are driving innovation in user experience and performance.",
     image: "/blog/digital-banking.jpg",
     date: "March 1, 2024",
-    category: "Banking",
+    category: "Web Development",
     author: "Sarah Johnson",
     authorImage: "/images/team/sarah.jpg",
     readTime: "5 min read",
   },
   {
-    title: "Enhancing Patient Care with Salesforce Health Cloud",
-    excerpt: "Learn how healthcare organizations are leveraging Salesforce Health Cloud to improve patient outcomes, streamline operations, and create more personalized care journeys.",
+    title: "How to Create a Successful Digital Marketing Strategy in 2024",
+    excerpt: "Learn how businesses are leveraging digital marketing strategies to improve brand awareness, reach new customers, and create more personalized marketing campaigns.",
     image: "/blog/health-cloud.jpg",
     date: "February 28, 2024",
-    category: "Healthcare",
+    category: "Digital Marketing",
     author: "Michael Chen",
     authorImage: "/images/team/michael.jpg",
     readTime: "7 min read",
   },
   {
-    title: "5 Key Benefits of Salesforce Marketing Cloud for Financial Services",
-    excerpt: "Discover how financial institutions are using Marketing Cloud to create personalized customer experiences, drive growth, and stay ahead in a competitive market.",
+    title: "5 Key Benefits of Responsive Design for E-Commerce Websites",
+    excerpt: "Discover how e-commerce businesses are using responsive design to create better shopping experiences, drive growth, and stay ahead in a competitive market.",
     image: "/blog/marketing-cloud.jpg",
     date: "February 25, 2024",
-    category: "Banking",
+    category: "UI/UX Design",
     author: "Emily Rodriguez",
     authorImage: "/images/team/emily.jpg",
     readTime: "6 min read",
@@ -65,41 +65,41 @@ const featuredPosts: Post[] = [
 
 const recentPosts: Post[] = [
   {
-    title: "How Data Cloud is Revolutionizing Customer Insights",
-    excerpt: "Discover how Salesforce Data Cloud is helping businesses unify customer data and derive actionable insights for more effective marketing campaigns.",
+    title: "How Data Analytics is Revolutionizing Digital Marketing",
+    excerpt: "Discover how data analytics is helping businesses understand customer behavior and derive actionable insights for more effective marketing campaigns.",
     image: "/blog/data-insights.jpg",
     date: "February 20, 2024",
-    category: "Data Cloud",
+    category: "Digital Marketing",
     author: "David Wilson",
     authorImage: "/images/team/david.jpg",
     readTime: "4 min read",
   },
   {
-    title: "Building Effective Customer Journeys in Healthcare",
-    excerpt: "Learn best practices for creating personalized patient journeys that improve engagement and outcomes throughout the care continuum.",
+    title: "Building Effective User Experiences for Healthcare Websites",
+    excerpt: "Learn best practices for creating intuitive healthcare website designs that improve patient engagement and satisfaction throughout their digital journey.",
     image: "/blog/healthcare-journeys.jpg",
     date: "February 18, 2024",
-    category: "Healthcare",
+    category: "UI/UX Design",
     author: "Lisa Thompson",
     authorImage: "/images/team/lisa.jpg",
     readTime: "8 min read",
   },
   {
-    title: "Maximizing ROI with Journey Builder Automation",
-    excerpt: "Explore strategies to optimize your marketing automation workflows and measure the impact on your business objectives.",
+    title: "Maximizing ROI with Social Media Marketing Automation",
+    excerpt: "Explore strategies to optimize your social media marketing workflows and measure the impact on your business objectives.",
     image: "/blog/journey-automation.jpg",
     date: "February 15, 2024",
-    category: "Journey Builder",
+    category: "Social Media",
     author: "James Parker",
     authorImage: "/images/team/james.jpg",
     readTime: "5 min read",
   },
   {
-    title: "Email Personalization Strategies That Drive Engagement",
-    excerpt: "Discover advanced personalization techniques in Email Studio that can significantly improve open rates, click-through rates, and conversions.",
+    title: "SEO Strategies That Drive Organic Traffic Growth",
+    excerpt: "Discover advanced SEO techniques that can significantly improve your website rankings, organic traffic, and conversion rates.",
     image: "/blog/email-personalization.jpg",
     date: "February 12, 2024",
-    category: "Email Studio",
+    category: "SEO & Analytics",
     author: "Sophia Martinez",
     authorImage: "/images/team/sophia.jpg",
     readTime: "6 min read",
@@ -158,7 +158,7 @@ export default function BlogPage() {
             Insights & Expertise
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Stay informed about the latest trends, best practices, and success stories in Salesforce Marketing Cloud and Data Cloud.
+            Stay informed about the latest trends, best practices, and success stories in web development and digital marketing.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             <div className="relative">
@@ -191,7 +191,7 @@ export default function BlogPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Featured Articles</h2>
             <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-              Dive into our most popular insights on Salesforce Marketing Cloud and Data Cloud
+              Dive into our most popular insights on web development and digital marketing
             </p>
           </div>
           
@@ -397,7 +397,7 @@ export default function BlogPage() {
                   Subscribe to Our Newsletter
                 </h2>
                 <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-                  Get the latest insights, tips, and updates on Salesforce Marketing Cloud and Data Cloud delivered directly to your inbox.
+                  Get the latest insights, tips, and updates on web development and digital marketing delivered directly to your inbox.
                 </p>
               </div>
               <form className="max-w-md mx-auto">
@@ -421,7 +421,7 @@ export default function BlogPage() {
                       className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                     />
                     <label htmlFor="consent" className="text-sm text-gray-100">
-                      I agree to receive marketing communications from Red Hibbert Group
+                      I agree to receive marketing communications from DigiMindsGlobal
                     </label>
                   </div>
                   <button
