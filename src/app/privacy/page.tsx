@@ -288,7 +288,7 @@ export default function PrivacyPolicy() {
                     </a>
                   </p>
                   <Link
-                    href="/marketing/contact"
+                    href="/contact"
                     className="inline-flex items-center bg-[#0176D3] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#032D60] transition-colors"
                   >
                     Contact Us
@@ -388,7 +388,7 @@ export default function PrivacyPolicy() {
                 <h3 className="text-xl font-bold text-[#032D60] mb-6">Need Help?</h3>
                 <p className="text-gray-600 mb-4">Our privacy team is here to help you with any questions or concerns.</p>
                 <Link
-                  href="/marketing/contact"
+                  href="/contact"
                   className="inline-flex items-center bg-[#0176D3] text-white px-4 py-2 rounded-lg font-medium hover:bg-[#032D60] transition-colors text-sm w-full justify-center"
                 >
                   Contact Privacy Team

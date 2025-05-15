@@ -1,10 +1,10 @@
 export const metadata = {
   title: {
-    default: 'Digimindsglobal - Salesforce Solutions for Banking & Healthcare',
+    default: 'Digimindsglobal - Digital Transformation Solutions for Business',
     template: '%s | Digimindsglobal'
   },
-  description: 'Transforming customer engagement with personalized Salesforce solutions for Banking and Healthcare industries.',
-  keywords: ['Salesforce', 'Banking', 'Healthcare', 'CRM', 'Digital Transformation', 'Marketing Cloud', 'Data Cloud'],
+  description: 'Transforming business operations with innovative digital solutions for enterprise growth and customer engagement.',
+  keywords: ['Digital Transformation', 'Web Development', 'UX Design', 'Software Solutions', 'B2B Lead Generation', 'Business Growth'],
   authors: [{ name: 'Digimindsglobal' }],
   creator: 'Digimindsglobal',
   metadataBase: new URL('https://digimindsglobal.com'),
@@ -17,14 +17,14 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://digimindsglobal.com',
-    title: 'Digimindsglobal - Salesforce Solutions for Banking & Healthcare',
-    description: 'Transforming customer engagement with personalized Salesforce solutions for Banking and Healthcare industries.',
+    title: 'Digimindsglobal - Digital Transformation Solutions for Business',
+    description: 'Transforming business operations with innovative digital solutions for enterprise growth and customer engagement.',
     siteName: 'Digimindsglobal'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Digimindsglobal - Salesforce Solutions for Banking & Healthcare',
-    description: 'Transforming customer engagement with personalized Salesforce solutions for Banking and Healthcare industries.',
+    title: 'Digimindsglobal - Digital Transformation Solutions for Business',
+    description: 'Transforming business operations with innovative digital solutions for enterprise growth and customer engagement.',
     creator: '@digimindsglobal'
   },
   robots: {

@@ -70,7 +70,7 @@ export default function AboutPage() {
               className="flex justify-center"
             >
               <Button asChild size="lg" className="bg-sky-500 hover:bg-sky-600 text-white shadow-lg shadow-sky-500/25 transition-all duration-300">
-                <Link href="/marketing/contact">
+                <Link href="/contact">
                   Get in Touch
                   <motion.svg 
                     xmlns="http://www.w3.org/2000/svg" 
@@ -130,7 +130,7 @@ export default function AboutPage() {
             />
             <div className="space-y-6 max-w-3xl mx-auto">
               <AnimatedText
-                text="Founded in 2022 with a vision to revolutionize digital experiences, we specialize in creating innovative solutions that transform how businesses operate in the digital age."
+                text="Founded in 2022 with a vision to revolutionize digital experiences through 2025 and beyond, we specialize in creating innovative solutions that transform how businesses operate in the digital age."
                 className="text-lg text-sky-100/80 leading-relaxed"
                 delay={0.1}
               />
@@ -157,9 +157,9 @@ export default function AboutPage() {
           >
             {[
               { year: "2022", title: "Foundation", description: "Founded DigiMindsGlobal to help businesses leverage digital technology for transformation and growth." },
-              { year: "2022", title: "First Projects", description: "Successfully delivered our first web development and digital marketing projects, establishing our expertise in the field." },
               { year: "2023", title: "Expansion", description: "Expanded our service offerings to include advanced digital solutions like e-commerce platforms and social media management." },
-              { year: "2024", title: "Future Vision", description: "Building next-generation integrated platforms combining web development and digital marketing for comprehensive business solutions." }
+              { year: "2024", title: "Growth Phase", description: "Scaled our operations and expanded our client portfolio across multiple industries with innovative digital solutions." },
+              { year: "2025", title: "Future Vision", description: "Building next-generation integrated platforms combining web development and digital marketing for comprehensive business solutions." }
             ].map((item, index) => (
               <motion.div 
                 key={index}
@@ -406,7 +406,7 @@ export default function AboutPage() {
                 transition={{ delay: 0.2 }}
               >
                 <Button asChild size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50">
-                  <Link href="/marketing/contact">
+                  <Link href="/contact">
                     Contact Our Team
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />

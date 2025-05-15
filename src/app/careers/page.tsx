@@ -96,7 +96,7 @@ export default function CareersPage() {
               <p className="text-lg text-gray-600 mb-6">
                 We're preparing new job opportunities. Please check back later or contact us directly if you're interested in joining our team.
               </p>
-              <Link href="/marketing/contact" className="inline-flex items-center bg-[#0176D3] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#0165b8] transition-all">
+              <Link href="/contact" className="inline-flex items-center bg-[#0176D3] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#0165b8] transition-all">
                 Contact Us
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -116,7 +116,7 @@ export default function CareersPage() {
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               We&apos;re always looking for talented individuals to join our team. Even if you don&apos;t see a position that matches your skills, we&apos;d love to hear from you.
             </p>
-            <Link href="/marketing/contact" className="inline-flex items-center bg-white text-[#0176D3] px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition-all shadow-lg">
+            <Link href="/contact" className="inline-flex items-center bg-white text-[#0176D3] px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition-all shadow-lg">
               Get in Touch
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />

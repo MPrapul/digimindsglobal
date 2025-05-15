@@ -2,28 +2,24 @@ import Image from "next/image";
 
 const clients = [
   {
-    name: "Bank of America",
-    logo: "/images/Bank-of-America-Emblem.png",
+    name: "Final Logo",
+    logo: "/images/companies/Final logo (1).jpg",
   },
   {
-    name: "JP Morgan Chase",
-    logo: "/images/JpMorganChage.jpg",
+    name: "Company 1",
+    logo: "/images/companies/PHOTO-2025-05-14-21-43-50.jpg",
   },
   {
-    name: "Mayo Clinic",
-    logo: "/images/MayoClininc.jpg",
+    name: "Company 2",
+    logo: "/images/companies/PHOTO-2025-05-14-21-44-48.jpg",
   },
   {
-    name: "Cleveland Clinic",
-    logo: "/images/clevelandClinicLogo.webp",
+    name: "Company 3",
+    logo: "/images/companies/PHOTO-2025-05-14-21-48-22.jpg",
   },
   {
-    name: "Cigna",
-    logo: "/images/cignaHealth.png",
-  },
-  {
-    name: "HSBC",
-    logo: "/images/Hbsc.png",
+    name: "Physiocare Plus",
+    logo: "/images/companies/physiocare plus.png",
   },
 ];
 
@@ -35,9 +31,9 @@ export function TrustSignals() {
           Trusted by Leading Organizations
         </h2>
         <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
-          We partner with industry leaders across finance, healthcare, and technology sectors to deliver innovative digital solutions
+          We collaborate with forward-thinking companies across diverse industries to deliver exceptional digital transformation solutions
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center mb-0">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center mx-auto max-w-4xl mb-0">
           {clients.map((client) => (
             <div
               key={client.name}

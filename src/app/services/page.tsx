@@ -6,185 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { motion } from 'framer-motion'
 import { useEffect } from 'react'
-
-const marketingCloudServices = [
-  {
-    title: "Email Studio",
-    description: "Create and send personalized emails at scale with advanced segmentation and analytics.",
-    icon: <span className="flex items-center justify-center w-full h-full text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z" />
-        <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10" />
-      </svg>
-    </span>,
-    href: "/marketing/services/marketing-cloud/email-studio",
-    bgColor: "bg-gradient-to-br from-[#4F46E5] to-[#7C3AED]"
-  },
-  {
-    title: "Journey Builder",
-    description: "Design and automate customer journeys across channels to deliver the right message at the right time.",
-    icon: <span className="flex items-center justify-center w-full h-full text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 3v5h5" />
-        <path d="M3 3 8.5 8.5" />
-        <path d="M21 21v-5h-5" />
-        <path d="M21 21l-5.5-5.5" />
-        <path d="M9 3h5a2 2 0 0 1 2 2v5" />
-        <path d="M15 21h-5a2 2 0 0 1-2-2v-5" />
-      </svg>
-    </span>,
-    href: "/marketing/services/marketing-cloud/journey-builder",
-    bgColor: "bg-gradient-to-br from-[#0EA5E9] to-[#2DD4BF]"
-  },
-  {
-    title: "Mobile Studio",
-    description: "Engage customers with personalized SMS, push notifications, and mobile experiences.",
-    icon: <span className="flex items-center justify-center w-full h-full text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M15 2H9a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z" />
-        <path d="M12 19h.01" />
-        <path d="M10 5h4" />
-      </svg>
-    </span>,
-    href: "/marketing/services/marketing-cloud/mobile-studio",
-    bgColor: "bg-gradient-to-br from-[#EC4899] to-[#8B5CF6]"
-  },
-  {
-    title: "Advertising Studio",
-    description: "Create targeted advertising campaigns using your CRM data for better ROI.",
-    icon: <span className="flex items-center justify-center w-full h-full text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M19 4v16" />
-        <path d="M7 4v16" />
-        <path d="M13 4v16" />
-        <path d="M1 4v16" />
-        <path d="m4 4 7.3 4.3c1.2.7 2.2 0 2.2-1.5V7" />
-      </svg>
-    </span>,
-    href: "/marketing/services/marketing-cloud/advertising-studio",
-    bgColor: "bg-gradient-to-br from-[#F97316] to-[#DB2777]"
-  },
-  {
-    title: "Interaction Studio",
-    description: "Deliver real-time personalization with AI-powered insights into customer behaviors.",
-    icon: <span className="flex items-center justify-center w-full h-full text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-        <path d="M12 9h4" />
-        <path d="M12 13h4" />
-        <path d="M12 17h4" />
-        <path d="M8 9h.01" />
-        <path d="M8 13h.01" />
-        <path d="M8 17h.01" />
-      </svg>
-    </span>,
-    href: "/marketing/services/marketing-cloud/interaction-studio",
-    bgColor: "bg-gradient-to-br from-[#2563EB] to-[#7C3AED]"
-  },
-  {
-    title: "Content Builder",
-    description: "Create and manage content for all channels in one centralized location.",
-    icon: <span className="flex items-center justify-center w-full h-full text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-        <polyline points="17 8 12 3 7 8" />
-        <line x1="12" y1="3" x2="12" y2="15" />
-      </svg>
-    </span>,
-    href: "/marketing/services/marketing-cloud/content-builder",
-    bgColor: "bg-gradient-to-br from-[#059669] to-[#0EA5E9]"
-  },
-]
-
-const dataCloudServices = [
-  {
-    title: "Data Integration",
-    description: "Seamlessly connect and unify data from multiple sources for a complete customer view.",
-    icon: <span className="flex items-center justify-center w-full h-full text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
-        <path d="M3 3v5h5" />
-        <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
-        <path d="M16 16h5v5" />
-      </svg>
-    </span>,
-    href: "/marketing/services/data-cloud/data-integration",
-    bgColor: "bg-gradient-to-br from-[#6366F1] to-[#A855F7]"
-  },
-  {
-    title: "Identity Resolution",
-    description: "Create unified customer profiles by resolving identities across channels and devices.",
-    icon: <span className="flex items-center justify-center w-full h-full text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    </span>,
-    href: "/marketing/services/data-cloud/identity-resolution",
-    bgColor: "bg-gradient-to-br from-[#0891B2] to-[#2DD4BF]"
-  },
-  {
-    title: "Audience Segmentation",
-    description: "Create targeted audience segments based on customer data and behavior patterns.",
-    icon: <span className="flex items-center justify-center w-full h-full text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M16.5 9.4 7.55 4.24" />
-        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-        <path d="M3.29 7 12 12l8.71-5" />
-        <path d="M12 22V12" />
-      </svg>
-    </span>,
-    href: "/marketing/services/data-cloud/audience-segmentation",
-    bgColor: "bg-gradient-to-br from-[#EA580C] to-[#E11D48]"
-  },
-  {
-    title: "Analytics & Insights",
-    description: "Generate actionable insights from your customer data with advanced analytics.",
-    icon: <span className="flex items-center justify-center w-full h-full text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 3v18h18" />
-        <path d="m19 9-5 5-4-4-3 3" />
-      </svg>
-    </span>,
-    href: "/marketing/services/data-cloud/analytics-insights",
-    bgColor: "bg-gradient-to-br from-[#7C3AED] to-[#EC4899]"
-  },
-  {
-    title: "Privacy & Compliance",
-    description: "Ensure data privacy and regulatory compliance across all operations.",
-    icon: <span className="flex items-center justify-center w-full h-full text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
-        <path d="M8 11h8" />
-        <path d="M12 15V7" />
-      </svg>
-    </span>,
-    href: "/marketing/services/data-cloud/privacy-compliance",
-    bgColor: "bg-gradient-to-br from-[#0D9488] to-[#0284C7]"
-  },
-  {
-    title: "Data Activation",
-    description: "Activate your customer data across marketing channels for personalized experiences.",
-    icon: <span className="flex items-center justify-center w-full h-full text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2v20" />
-        <path d="M2 12h20" />
-        <path d="m12 2 4 4" />
-        <path d="m12 2-4 4" />
-        <path d="m12 22 4-4" />
-        <path d="m12 22-4-4" />
-        <path d="m2 12 4 4" />
-        <path d="m2 12 4-4" />
-        <path d="m22 12-4 4" />
-        <path d="m22 12-4-4" />
-      </svg>
-    </span>,
-    href: "/marketing/services/data-cloud/data-activation",
-    bgColor: "bg-gradient-to-br from-[#4F46E5] to-[#0EA5E9]"
-  }
-]
+import { ChevronRightIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
 
 const mainServices = [
   {
@@ -206,7 +28,7 @@ const mainServices = [
       "Responsive Design for All Devices",
       "Website Maintenance & Support"
     ],
-    href: "/marketing/services/web-design",
+    href: "/services/web-design",
     bgColor: "bg-gradient-to-br from-[#0176D3] to-[#1589ee]"
   },
   {
@@ -230,7 +52,7 @@ const mainServices = [
       "CRM Integration & Management",
       "Lead Nurturing & Follow-up Automation"
     ],
-    href: "/marketing/services/lead-generation",
+    href: "/services/lead-generation",
     bgColor: "bg-gradient-to-br from-[#032D60] to-[#0176D3]"
   },
   {
@@ -250,7 +72,7 @@ const mainServices = [
       "Quality Assurance & Testing",
       "Software Maintenance & Support"
     ],
-    href: "/marketing/services/software-development",
+    href: "/services/software-development",
     bgColor: "bg-gradient-to-br from-[#1589ee] to-[#0176D3]"
   },
   {
@@ -275,7 +97,7 @@ const mainServices = [
       "Design Systems & Style Guides",
       "Usability Testing & Optimization"
     ],
-    href: "/marketing/services/ux-design",
+    href: "/services/ux-design",
     bgColor: "bg-gradient-to-br from-[#032D60] to-[#0176D3]"
   },
   {
@@ -294,7 +116,7 @@ const mainServices = [
       "Social Media Analytics & Reporting",
       "Platform-Specific Content Optimization"
     ],
-    href: "/marketing/services/social-media",
+    href: "/services/social-media",
     bgColor: "bg-gradient-to-br from-[#4F46E5] to-[#7C3AED]"
   },
   {
@@ -314,7 +136,7 @@ const mainServices = [
       "Email Marketing Campaigns",
       "Marketing Automation & Integration"
     ],
-    href: "/marketing/services/digital-marketing",
+    href: "/services/digital-marketing",
     bgColor: "bg-gradient-to-br from-[#EA580C] to-[#E11D48]"
   }
 ]
@@ -513,7 +335,7 @@ export default function ServicesPage() {
           >
             <motion.div variants={buttonHover} initial="rest" whileHover="hover">
               <Button size="lg" className="rounded-full bg-gradient-to-r from-[#0176D3] to-[#1589EE] hover:from-[#0B5CAB] hover:to-[#0176D3] shadow-lg hover:shadow-2xl hover:shadow-[#0176D3]/30 transition-all duration-300 text-base py-6 px-8 sm:text-lg sm:py-7 sm:px-10 border border-white/20">
-                <Link href="/marketing/contact" className="flex items-center gap-2">
+                <Link href="/contact" className="flex items-center gap-2">
                   Get Started
                   <motion.span 
                     initial={{ x: 0 }}
@@ -1034,7 +856,7 @@ export default function ServicesPage() {
                   className="inline-block"
                 >
                   <Button asChild size="lg" variant="secondary" className="rounded-full bg-white text-[#0176D3] hover:bg-white/90 shadow-lg hover:shadow-white/20 transition-all duration-300 text-base py-6 px-8">
-                    <Link href="/marketing/contact" className="flex items-center">
+                    <Link href="/contact" className="flex items-center">
                       Schedule a Consultation
                       <motion.span 
                         initial={{ x: 0 }}

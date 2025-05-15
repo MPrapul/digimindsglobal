@@ -54,28 +54,28 @@ export function AnimatedHero() {
       icon: "/images/icons/web-design.svg",
       color: "bg-[#eef5fc] border-[#b4c8e1]",
       hoverColor: "hover:bg-[#e6f0fa] hover:border-[#0176D3]",
-      link: "/marketing/services/web-design"
+      link: "/services/web-design"
     },
     {
       name: "B2B Lead Generation & Social Media",
       icon: "/images/icons/lead-generation.svg",
       color: "bg-[#eef5fc] border-[#b4c8e1]",
       hoverColor: "hover:bg-[#e6f0fa] hover:border-[#0176D3]",
-      link: "/marketing/services/lead-generation"
+      link: "/services/lead-generation"
     },
     {
       name: "Software Development & Testing",
       icon: "/images/icons/software-dev.svg",
       color: "bg-[#eef5fc] border-[#b4c8e1]",
       hoverColor: "hover:bg-[#e6f0fa] hover:border-[#0176D3]",
-      link: "/marketing/services/software-development"
+      link: "/services/software-development"
     },
     {
       name: "UI/UX Design",
       icon: "/images/icons/ux-design.svg",
       color: "bg-[#eef5fc] border-[#b4c8e1]",
       hoverColor: "hover:bg-[#e6f0fa] hover:border-[#0176D3]",
-      link: "/marketing/services/ux-design"
+      link: "/services/ux-design"
     }
   ];
 
@@ -166,7 +166,7 @@ export function AnimatedHero() {
                 size="lg" 
                 className="bg-gradient-to-r from-[#0176D3] to-[#1589ee] hover:from-[#0176D3] hover:to-[#0176D3] text-white shadow-md hover:shadow-lg transition-all duration-300 border border-transparent"
               >
-                <Link href="/marketing/services">
+                <Link href="/services">
                   Our Services
                 </Link>
               </Button>
@@ -177,7 +177,7 @@ export function AnimatedHero() {
                 variant="outline" 
                 className="border-[#0176D3] text-[#0176D3] hover:bg-[#f0f8ff] shadow-sm hover:shadow-md transition-all duration-300"
               >
-                <Link href="/marketing/contact">
+                <Link href="/contact">
                   Contact Us
                 </Link>
               </Button>

@@ -30,7 +30,7 @@ const imageLoader = ({ src, width, quality = 75 }: ImageLoaderProps): string => 
 }
 
 // Add priority loading for above-the-fold images
-const PRIORITY_IMAGES = ['/images/team-collaboration.jpg']
+const PRIORITY_IMAGES = ['/images/About.jpg']
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState("web");
@@ -173,7 +173,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">Web Design</h3>
                     <p className="text-white/80 mb-6">Modern, responsive websites that boost your online presence and convert visitors into customers.</p>
-                    <Link href="/marketing/services/web-design" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                    <Link href="/services/web-design" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6" />
@@ -200,7 +200,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">E-commerce Websites</h3>
                     <p className="text-white/80 mb-6">Turn your website into a powerful sales channel with our custom e-commerce solutions.</p>
-                    <Link href="/marketing/services/web-design" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                    <Link href="/services/web-design" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6" />
@@ -227,7 +227,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">WordPress Development</h3>
                     <p className="text-white/80 mb-6">Harness the power of WordPress with custom themes and plugins tailored to your business needs.</p>
-                    <Link href="/marketing/services/web-design" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                    <Link href="/services/web-design" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6" />
@@ -261,7 +261,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">B2B Lead Generation</h3>
                     <p className="text-white/80 mb-6">Attract high-quality business leads through targeted marketing campaigns and strategic outreach.</p>
-                    <Link href="/marketing/services/lead-generation" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                    <Link href="/services/lead-generation" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6" />
@@ -285,7 +285,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">Social Media Management</h3>
                     <p className="text-white/80 mb-6">Build brand awareness and engagement through strategic social media presence and content.</p>
-                    <Link href="/marketing/services/social-media" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                    <Link href="/services/social-media" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6" />
@@ -313,7 +313,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">Content Marketing</h3>
                     <p className="text-white/80 mb-6">Create valuable content that attracts prospects and nurtures leads through the buyer's journey.</p>
-                    <Link href="/marketing/services/lead-generation" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                    <Link href="/services/lead-generation" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6" />
@@ -348,7 +348,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">Data Cloud Implementation</h3>
                     <p className="text-white/80 mb-6">Unify, analyze, and activate your customer data across all touchpoints for personalized experiences at scale.</p>
-                    <Link href="marketing/services/data-cloud/services/data-cloud-implementation" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                    <Link href="/services/data-cloud/services/data-cloud-implementation" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6" />
@@ -518,7 +518,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">Software Development</h3>
                     <p className="text-white/80 mb-6">Custom software solutions and mobile apps built with quality assurance and testing for reliable results.</p>
-                    <Link href="/marketing/services/software-development" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                    <Link href="/services/software-development" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6" />
@@ -544,7 +544,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">Mobile App Development</h3>
                     <p className="text-white/80 mb-6">Create powerful, user-friendly mobile applications that extend your business reach and enhance engagement.</p>
-                    <Link href="/marketing/services/software-development" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                    <Link href="/services/software-development" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6" />
@@ -571,7 +571,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">Software Testing & QA</h3>
                     <p className="text-white/80 mb-6">Ensure your software meets the highest standards with our comprehensive testing and QA services.</p>
-                    <Link href="/marketing/services/software-development" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                    <Link href="/services/software-development" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6" />
@@ -605,7 +605,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">User Experience Design</h3>
                     <p className="text-white/80 mb-6">Create intuitive interfaces that enhance user satisfaction by improving usability and accessibility.</p>
-                    <Link href="/marketing/services/ux-design" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                    <Link href="/services/ux-design" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6" />
@@ -637,7 +637,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">Interface Design</h3>
                     <p className="text-white/80 mb-6">Create visually stunning and functional interfaces that engage users and align with your brand identity.</p>
-                    <Link href="/marketing/services/ux-design" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                    <Link href="/services/ux-design" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6" />
@@ -661,7 +661,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">Prototyping & Testing</h3>
                     <p className="text-white/80 mb-6">Validate design concepts with interactive prototypes and user testing to ensure your digital products succeed.</p>
-                    <Link href="/marketing/services/ux-design" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                    <Link href="/services/ux-design" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6" />
@@ -690,7 +690,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">Social Media Strategy</h3>
                     <p className="text-white/80 mb-6">Build a strategic social media plan to boost your brand's online presence and engagement.</p>
-                    <Link href="/marketing/services/lead-generation" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                    <Link href="/services/lead-generation" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6" />
@@ -718,7 +718,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">Content Creation</h3>
                     <p className="text-white/80 mb-6">Develop engaging, high-quality content that resonates with your audience and drives engagement.</p>
-                    <Link href="/marketing/services/lead-generation" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                    <Link href="/services/lead-generation" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6" />
@@ -742,7 +742,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">Social Media Ads</h3>
                     <p className="text-white/80 mb-6">Reach your target audience and drive conversions with targeted social media advertising campaigns.</p>
-                    <Link href="/marketing/services/lead-generation" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
+                    <Link href="/services/lead-generation" className="inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300">
                       Learn More
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m9 18 6-6-6-6" />
@@ -755,7 +755,7 @@ export default function Home() {
             
             {/* View All Services Button */}
             <div className="mt-12 text-center">
-              <Link href="/marketing/services" className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm text-white border border-white/30 px-6 py-3 rounded-lg font-medium hover:bg-white/20 transition-all duration-300 group">
+              <Link href="/services" className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm text-white border border-white/30 px-6 py-3 rounded-lg font-medium hover:bg-white/20 transition-all duration-300 group">
                 View All Services
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14" />
@@ -798,14 +798,14 @@ export default function Home() {
                 <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-[#1589ee]/10 rounded-full blur-3xl"></div>
                 <div className="relative z-10 bg-white/5 backdrop-blur-lg p-2 rounded-2xl overflow-hidden border border-[#0176D3]/20 shadow-xl transition-all duration-300 hover:shadow-[#0176D3]/10 hover:shadow-2xl group">
                   <Image
-                    src="/images/team-collaboration.jpg"
-                    alt="Team Collaboration"
+                    src="/images/About.jpg"
+                    alt="About DigiMindsGlobal"
                     width={600}
                     height={400}
                     className={`w-full h-auto rounded-xl transform transition-transform duration-700 group-hover:scale-105 ${
                       imagesLoaded ? 'opacity-100' : 'opacity-0'
                     }`}
-                    priority={PRIORITY_IMAGES.includes('/images/team-collaboration.jpg')}
+                    priority={PRIORITY_IMAGES.includes('/images/About.jpg')}
                     onLoad={handleImageLoad}
                     loader={imageLoader}
                     placeholder="blur"
@@ -834,7 +834,7 @@ export default function Home() {
             {/* Features Grid */}
             <div className="mt-24">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <Link href="/marketing/services/web-design" className="block">
+                <Link href="/services/web-design" className="block">
                   <div className="bg-white p-6 rounded-lg shadow-md border border-[#b4c8e1] hover:shadow-lg hover:border-[#0176D3]/30 transition-all duration-300 group h-full">
                     <div className="text-[#0176D3] text-4xl mb-4 flex justify-center">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16 transform group-hover:scale-110 transition-transform duration-300">
@@ -847,7 +847,7 @@ export default function Home() {
                   </div>
                 </Link>
 
-                <Link href="/marketing/services/digital-marketing" className="block">
+                <Link href="/services/digital-marketing" className="block">
                   <div className="bg-white p-6 rounded-lg shadow-md border border-[#b4c8e1] hover:shadow-lg hover:border-[#0176D3]/30 transition-all duration-300 group h-full">
                     <div className="text-[#0176D3] text-4xl mb-4 flex justify-center">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16 transform group-hover:scale-110 transition-transform duration-300">
@@ -859,7 +859,7 @@ export default function Home() {
                   </div>
                 </Link>
 
-                <Link href="/marketing/services/social-media" className="block">
+                <Link href="/services/social-media" className="block">
                   <div className="bg-white p-6 rounded-lg shadow-md border border-[#b4c8e1] hover:shadow-lg hover:border-[#0176D3]/30 transition-all duration-300 group h-full">
                     <div className="text-[#0176D3] text-4xl mb-4 flex justify-center">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16 transform group-hover:scale-110 transition-transform duration-300">
@@ -871,7 +871,7 @@ export default function Home() {
                   </div>
                 </Link>
 
-                <Link href="/marketing/services/ux-design" className="block">
+                <Link href="/services/ux-design" className="block">
                   <div className="bg-white p-6 rounded-lg shadow-md border border-[#b4c8e1] hover:shadow-lg hover:border-[#0176D3]/30 transition-all duration-300 group h-full">
                     <div className="text-[#0176D3] text-4xl mb-4 flex justify-center">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16 transform group-hover:scale-110 transition-transform duration-300">
@@ -990,11 +990,11 @@ export default function Home() {
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Transform Your Digital Experience?</h2>
               <p className="text-xl text-[#b4c8e1] mb-10 max-w-3xl mx-auto leading-relaxed">
-                Let&apos;s discuss how our Salesforce Marketing Cloud and Data Cloud expertise can help you achieve your business goals.
+                Let&apos;s discuss how our comprehensive digital transformation solutions can elevate your business and drive sustainable growth.
               </p>
               <div className="relative inline-block group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#1589ee] to-white opacity-70 rounded-full blur-md group-hover:opacity-100 transition-opacity duration-300"></div>
-                <Link href="/marketing/contact" className="relative inline-flex items-center bg-white text-[#0176D3] hover:text-[#032D60] transition-colors px-8 py-4 rounded-full font-bold text-lg border border-transparent shadow-md hover:shadow-lg group-hover:shadow-xl">
+                <Link href="/contact" className="relative inline-flex items-center bg-white text-[#0176D3] hover:text-[#032D60] transition-colors px-8 py-4 rounded-full font-bold text-lg border border-transparent shadow-md hover:shadow-lg group-hover:shadow-xl">
                   Get Started Today
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14"/>

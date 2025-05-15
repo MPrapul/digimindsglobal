@@ -261,7 +261,7 @@ export default function AccessibilityPage() {
                     </a>
                   </div>
                   <Link
-                    href="/marketing/contact"
+                    href="/contact"
                     className="inline-flex items-center bg-[#0176D3] text-white px-8 py-4 rounded-xl font-medium hover:bg-[#032D60] transition-colors shadow-lg hover:shadow-xl"
                   >
                     Contact Us
@@ -343,7 +343,7 @@ export default function AccessibilityPage() {
                 <h3 className="text-xl font-bold text-[#032D60] mb-6">Need Assistance?</h3>
                 <p className="text-gray-600 mb-6">Our accessibility team is here to help you navigate our website.</p>
                 <Link
-                  href="/marketing/contact"
+                  href="/contact"
                   className="inline-flex items-center bg-[#0176D3] text-white px-4 py-3 rounded-xl font-medium hover:bg-[#032D60] transition-colors text-sm w-full justify-center shadow-md hover:shadow-lg"
                 >
                   Get Support

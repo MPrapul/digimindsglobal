@@ -191,7 +191,7 @@ export default function CookiePolicy() {
                     </a>
                   </p>
                   <Link
-                    href="/marketing/contact"
+                    href="/contact"
                     className="inline-flex items-center bg-[#0176D3] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#032D60] transition-colors"
                   >
                     Contact Us

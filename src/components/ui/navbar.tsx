@@ -27,7 +27,7 @@ export function Navbar() {
             <Link href="/" className="text-gray-700 hover:text-primary font-medium">
               Home
             </Link>
-            <Link href="/marketing/services" className="text-gray-700 hover:text-primary font-medium">
+            <Link href="/services" className="text-gray-700 hover:text-primary font-medium">
               Services
             </Link>
             <Link href="/about" className="text-gray-700 hover:text-primary font-medium">
@@ -40,7 +40,7 @@ export function Navbar() {
               Careers
             </Link>
             <Link
-              href="/marketing/contact"
+              href="/contact"
               className="bg-[#444a7d] hover:bg-[#363c64] text-white px-6 py-2.5 rounded-md transition-colors font-medium"
             >
               Contact Us
@@ -69,7 +69,7 @@ export function Navbar() {
               Home
             </Link>
             <Link 
-              href="/marketing/services" 
+              href="/services" 
               className="text-gray-700 hover:text-primary py-2 font-medium"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -97,7 +97,7 @@ export function Navbar() {
               Careers
             </Link>
             <Link
-              href="/marketing/contact"
+              href="/contact"
               className="bg-[#444a7d] hover:bg-[#363c64] text-white px-6 py-2.5 rounded-md transition-colors inline-block w-fit font-medium"
               onClick={() => setMobileMenuOpen(false)}
             >

@@ -369,24 +369,18 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-blue-950/95 to-slate-900/95"></div>
-          <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-10"></div>
-          <div className="relative w-full h-full">
-            <Image
-              src="/images/newsletter-bg.jpg" // Move the image to local assets
-              alt="Tech Background"
-              fill
-              className="object-cover object-center"
-              priority
-              sizes="100vw"
-              quality={90}
-            />
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-blue-600/10 mix-blend-overlay animate-gradient"></div>
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="py-16 my-12 relative overflow-hidden">
+        {/* Use gradient background instead of image */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-900"></div>
+        
+        {/* Add some subtle patterns for texture */}
+        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10"></div>
+        
+        {/* Shape decorations */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-slate-900/80 to-blue-900/80 backdrop-blur-xl p-10 rounded-3xl shadow-2xl border border-blue-400/10">
               <div className="text-center mb-8">

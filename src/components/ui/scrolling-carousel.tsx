@@ -261,7 +261,7 @@ export function ScrollingCarousel({
               }}
             >
               <Link 
-                href={service.link || "/marketing/services"} 
+                href={service.link || "/services"} 
                 className="block h-full"
               >
                 <motion.div 
