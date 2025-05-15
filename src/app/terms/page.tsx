@@ -127,10 +127,10 @@ export default function TermsOfService() {
                 >
                   <h2 className="text-2xl font-bold text-[#032D60] mb-6">Introduction</h2>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    Welcome to Red Hibbert Group LLC. These Terms of Service ("Terms") govern your access to and use of our website, products, and services (collectively, the "Services").
+                    Welcome to Digiminds Global. These terms and conditions outline the rules and regulations for the use of our website.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    By accessing or using our Services, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our Services.
+                    By accessing this website, we assume you accept these terms and conditions in full. Do not continue to use Digiminds Global's website if you do not accept all of the terms and conditions stated on this page.
                   </p>
                 </motion.div>
 
@@ -204,8 +204,8 @@ export default function TermsOfService() {
                   <h2 className="text-2xl font-bold text-[#032D60] mb-6">Questions About Our Terms?</h2>
                   <p className="text-gray-700 mb-6">
                     If you have any questions about these Terms, please contact us at{' '}
-                    <a href="mailto:legal@redhibbert.com" className="text-[#0176D3] hover:text-[#032D60] transition-colors">
-                      legal@redhibbert.com
+                    <a href="mailto:info@digimindsglobal.tech" className="text-[#0176D3] hover:text-[#032D60] transition-colors">
+                      info@digimindsglobal.tech
                     </a>
                   </p>
                   <Link

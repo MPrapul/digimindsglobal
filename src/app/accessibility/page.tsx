@@ -52,7 +52,7 @@ export default function AccessibilityPage() {
               Accessibility Statement
             </h1>
             <p className="text-xl text-[#b4c8e1] mb-8 max-w-2xl mx-auto leading-relaxed">
-              Our commitment to creating an inclusive digital experience for all users.
+              Digiminds Global is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.
             </p>
           </motion.div>
         </div>
@@ -267,6 +267,59 @@ export default function AccessibilityPage() {
                     Contact Us
                     <ChevronRight className="w-5 h-5 ml-2" />
                   </Link>
+                </motion.div>
+
+                <motion.div
+                  variants={fadeIn}
+                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-[#b4c8e1]/30"
+                >
+                  <h2 className="text-2xl font-bold text-[#032D60] mb-6">Accessibility Statement</h2>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    Digiminds Global is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.
+                  </p>
+
+                  <h3 className="text-xl font-semibold text-[#032D60] mt-8 mb-4">Our Accessibility Goals</h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    We strive to ensure that our website adheres to level AA of the Web Content Accessibility Guidelines (WCAG) 2.1. These guidelines explain how to make web content more accessible for people with disabilities.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    We're working to ensure that our website is:
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-700 mb-6">
+                    <li className="mb-2">Keyboard navigable</li>
+                    <li className="mb-2">Screen reader friendly</li>
+                    <li className="mb-2">Organized with clear heading structure</li>
+                    <li className="mb-2">Designed with adequate color contrast</li>
+                    <li className="mb-2">Usable with magnification and zooming</li>
+                  </ul>
+
+                  <h3 className="text-xl font-semibold text-[#032D60] mt-8 mb-4">Compatible Technologies</h3>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    We aim to support the following:
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-700 mb-6">
+                    <li className="mb-2">Recent versions of major browsers including Chrome, Firefox, Safari, and Edge</li>
+                    <li className="mb-2">Common screen readers including JAWS, NVDA, and VoiceOver</li>
+                    <li className="mb-2">Operating system accessibility features</li>
+                  </ul>
+
+                  <h3 className="text-xl font-semibold text-[#032D60] mt-8 mb-4">Ongoing Improvements</h3>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    Our website is regularly reviewed and updated to ensure continued accessibility. We welcome your feedback as we strive to improve our website accessibility.
+                  </p>
+
+                  <h3 className="text-xl font-semibold text-[#032D60] mt-8 mb-4">Contact Us</h3>
+                  <p className="text-gray-700 mb-4">
+                    If you encounter any accessibility barriers or have suggestions for improvement, please contact us at:
+                  </p>
+                  <p className="text-gray-700 mb-2">
+                    Email: <a href="mailto:info@digimindsglobal.tech" className="text-[#0176D3] hover:text-[#032D60] transition-colors">info@digimindsglobal.tech</a>
+                  </p>
+                  <p className="text-gray-700 mb-6">
+                    Phone: <a href="tel:+916304647593" className="text-[#0176D3] hover:text-[#032D60] transition-colors">+91 6304647593</a>
+                  </p>
+
+                  <p className="text-sm text-gray-500 mt-8">Last updated: May 15, 2024</p>
                 </motion.div>
               </motion.div>
             </div>

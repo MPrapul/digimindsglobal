@@ -2,7 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import CookieConsent from './CookieConsent'
-import ChatBot from '@/components/ChatBot'
+import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -113,7 +114,6 @@ export default function MarketingPage() {
 
         <CookieConsent />
       </div>
-      <ChatBot />
     </>
   )
 } 

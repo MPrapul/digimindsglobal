@@ -3,9 +3,9 @@
 import dynamic from 'next/dynamic'
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense, useState, useEffect } from "react";
-import type { ImageLoaderProps } from 'next/image'
-import ChatBot from '@/components/ChatBot'
+import { Suspense, useState } from "react";
+import { ImageLoaderProps } from "next/legacy/image";
+import { ChevronDownIcon } from "lucide-react";
 
 // Remove static imports and use only dynamic imports
 const TrustSignalsComponent = dynamic(() => 
@@ -96,7 +96,7 @@ export default function Home() {
                 </button>
                 <button
                   onClick={() => handleCategoryChange("lead", 1)}
-                  className={`whitespace-nowrap min-w-[140px] md:flex-1 py-2.5 px-3 md:px-4 rounded-md text-xs md:text-sm font-medium transition-all duration-200 ${
+                  className={`whitespace-nowrap min-w-[170px] md:flex-1 py-2.5 px-3 md:px-4 rounded-md text-xs md:text-sm font-medium transition-all duration-200 ${
                     activeCategory === "lead"
                       ? "bg-white text-[#032D60] shadow-sm"
                       : "text-white hover:bg-white/10"
@@ -1011,7 +1011,6 @@ export default function Home() {
           <TrustSignalsComponent />
         </Suspense>
       </main>
-      <ChatBot />
     </>
   );
 }

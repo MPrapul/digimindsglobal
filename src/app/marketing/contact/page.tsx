@@ -81,15 +81,9 @@ function ContactForm() {
     const name = searchParams.get('name')
     const email = searchParams.get('email')
     const message = searchParams.get('message')
-    const source = searchParams.get('source')
 
-    if (source === 'chatbot' && (name || email || message)) {
-      setFormData(prev => ({
-        ...prev,
-        name: name || prev.name,
-        email: email || prev.email,
-        message: message || prev.message
-      }))
+    if (name && email && message) {
+      // Continue with form processing, removing any chatbot-specific logic
     }
   }, [searchParams])
 
@@ -847,14 +841,6 @@ function ContactForm() {
                         >
                           <Mail className="mr-2 h-4 w-4" />
                           Contact Us
-                        </Button>
-                        <Button
-                          type="button"
-                          onClick={() => setIsOpen(true)}
-                          className="bg-gradient-to-r from-[#FF4B6E] to-[#6f42c1] text-white hover:opacity-90 hover:scale-105 transform transition-all duration-200"
-                        >
-                          <MessageSquare className="mr-2 h-4 w-4" />
-                          Open Chatbot
                         </Button>
                       </div>
                     )}

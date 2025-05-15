@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils'
 import './globals.css'
 import { Navbar } from "@/components/ui/navbar"
 import { Footer } from "@/components/ui/footer"
-import ChatBotWrapper from '@/components/ChatBotWrapper'
+import WhatsAppChat from '@/components/WhatsAppChat'
 import { metadata } from './metadata'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <head>
-        <link rel="icon" href="/images/logos/Digimindglobal-removebg-preview.png" />
-        <link rel="shortcut icon" href="/images/logos/Digimindglobal-removebg-preview.png" />
-        <link rel="apple-touch-icon" href="/images/logos/Digimindglobal-removebg-preview.png" />
+        <link rel="icon" href="/images/DigimindglobalFav.png" />
+        <link rel="shortcut icon" href="/images/DigimindglobalFav.png" />
+        <link rel="apple-touch-icon" href="/images/DigimindglobalFav.png" />
       </head>
       <body className={cn(
         'min-h-screen bg-background font-sans antialiased',
@@ -30,7 +30,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-        <ChatBotWrapper />
+        <WhatsAppChat />
         <Analytics />
       </body>
     </html>

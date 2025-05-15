@@ -125,13 +125,65 @@ export default function PrivacyPolicy() {
                   variants={fadeIn}
                   className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-[#b4c8e1]/30"
                 >
-                  <h2 className="text-2xl font-bold text-[#032D60] mb-6">Overview</h2>
+                  <h2 className="text-2xl font-bold text-[#032D60] mb-6">Privacy Policy</h2>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    At Digiminds Global, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page.
+                  </p>
+
+                  <h3 className="text-xl font-semibold text-[#032D60] mt-8 mb-4">Information We Collect</h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    This Privacy Policy explains how Red Hibbert Group LLC ("we", "us", or "our") collects, uses, and protects your personal information when you use our services or visit our website.
+                    We may collect information about you in a variety of ways. The information we may collect includes:
                   </p>
-                  <p className="text-gray-700 leading-relaxed">
-                    We are committed to ensuring that your privacy is protected and maintaining the security of any personal information received from you.
+                  <ul className="list-disc pl-6 text-gray-700 mb-6">
+                    <li className="mb-2">Personal Data: Name, email address, phone number, and other contact information you provide.</li>
+                    <li className="mb-2">Usage Data: Information about how you use our website and services.</li>
+                    <li className="mb-2">Cookies and Tracking Data: Information collected through cookies and similar technologies.</li>
+                  </ul>
+
+                  <h3 className="text-xl font-semibold text-[#032D60] mt-8 mb-4">How We Use Your Information</h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    We may use the information we collect about you for various purposes, including:
                   </p>
+                  <ul className="list-disc pl-6 text-gray-700 mb-6">
+                    <li className="mb-2">To provide and maintain our services</li>
+                    <li className="mb-2">To notify you about changes to our services</li>
+                    <li className="mb-2">To provide customer support</li>
+                    <li className="mb-2">To gather analysis or valuable information so that we can improve our services</li>
+                    <li className="mb-2">To monitor the usage of our services</li>
+                    <li className="mb-2">To detect, prevent, and address technical issues</li>
+                  </ul>
+
+                  <h3 className="text-xl font-semibold text-[#032D60] mt-8 mb-4">Disclosure of Your Information</h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    We may share your information in the following situations:
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-700 mb-6">
+                    <li className="mb-2">With service providers to monitor and analyze the use of our services</li>
+                    <li className="mb-2">For business transfers, in connection with any merger, sale of company assets, financing, or acquisition</li>
+                    <li className="mb-2">With your consent, when you have given us permission to do so</li>
+                    <li className="mb-2">If required by law, such as in response to a subpoena or court order</li>
+                  </ul>
+
+                  <h3 className="text-xl font-semibold text-[#032D60] mt-8 mb-4">Your Privacy Rights</h3>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    You have certain rights regarding your personal information. These may include the right to access, correct, delete, or restrict the use of your personal information.
+                  </p>
+
+                  <h3 className="text-xl font-semibold text-[#032D60] mt-8 mb-4">Contact Us</h3>
+                  <p className="text-gray-700 mb-2">
+                    If you have any questions about this Privacy Policy, please contact us at:
+                  </p>
+                  <p className="text-gray-700 mb-2">
+                    Email: <a href="mailto:info@digimindsglobal.tech" className="text-[#0176D3] hover:text-[#032D60] transition-colors">info@digimindsglobal.tech</a>
+                  </p>
+                  <p className="text-gray-700 mb-6">
+                    Phone: <a href="tel:+916304647593" className="text-[#0176D3] hover:text-[#032D60] transition-colors">+91 6304647593</a>
+                  </p>
+
+                  <p className="text-sm text-gray-500 mt-8">Last updated: May 15, 2024</p>
                 </motion.div>
 
                 {/* Information Collection */}

@@ -125,13 +125,55 @@ export default function CookiePolicy() {
                   variants={fadeIn}
                   className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-[#b4c8e1]/30"
                 >
-                  <h2 className="text-2xl font-bold text-[#032D60] mb-6">What Are Cookies?</h2>
+                  <h2 className="text-2xl font-bold text-[#032D60] mb-6">Cookie Policy</h2>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    This Cookie Policy explains how Digiminds Global uses cookies and similar technologies to recognize you when you visit our website. It explains what these technologies are and why we use them, as well as your rights to control our use of them.
+                  </p>
+
+                  <h3 className="text-xl font-semibold text-[#032D60] mt-8 mb-4">What Are Cookies?</h3>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners in order to make their websites work, or to work more efficiently, as well as to provide reporting information.
+                  </p>
+
+                  <h3 className="text-xl font-semibold text-[#032D60] mt-8 mb-4">How We Use Cookies</h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    Cookies are small text files that are placed on your device when you visit our website. They help us provide you with a better experience by remembering your preferences and understanding how you use our site.
+                    We use cookies for the following purposes:
                   </p>
-                  <p className="text-gray-700 leading-relaxed">
-                    We use both session cookies (which expire when you close your browser) and persistent cookies (which stay on your device until they expire or you delete them).
+                  <ul className="list-disc pl-6 text-gray-700 mb-6">
+                    <li className="mb-2">Essential cookies: These are necessary for the website to function properly.</li>
+                    <li className="mb-2">Analytical/performance cookies: These allow us to recognize and count the number of visitors and to see how visitors move around our website.</li>
+                    <li className="mb-2">Functionality cookies: These are used to recognize you when you return to our website.</li>
+                    <li className="mb-2">Targeting cookies: These record your visit to our website, the pages you have visited and the links you have followed.</li>
+                  </ul>
+
+                  <h3 className="text-xl font-semibold text-[#032D60] mt-8 mb-4">Your Cookie Choices</h3>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    Most browsers allow you to refuse to accept cookies and to delete cookies. The methods for doing so vary from browser to browser, and from version to version. You can however obtain up-to-date information about blocking and deleting cookies via these links:
                   </p>
+                  <ul className="list-disc pl-6 text-gray-700 mb-6">
+                    <li className="mb-2"><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer" className="text-[#0176D3] hover:text-[#032D60] transition-colors">Chrome</a></li>
+                    <li className="mb-2"><a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" target="_blank" rel="noopener noreferrer" className="text-[#0176D3] hover:text-[#032D60] transition-colors">Firefox</a></li>
+                    <li className="mb-2"><a href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer" className="text-[#0176D3] hover:text-[#032D60] transition-colors">Edge</a></li>
+                    <li className="mb-2"><a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" target="_blank" rel="noopener noreferrer" className="text-[#0176D3] hover:text-[#032D60] transition-colors">Safari</a></li>
+                  </ul>
+
+                  <h3 className="text-xl font-semibold text-[#032D60] mt-8 mb-4">Changes to This Cookie Policy</h3>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    We may update this Cookie Policy from time to time in order to reflect changes to the cookies we use or for other operational, legal or regulatory reasons. Please visit this Cookie Policy regularly to stay informed about our use of cookies and related technologies.
+                  </p>
+
+                  <h3 className="text-xl font-semibold text-[#032D60] mt-8 mb-4">Contact Us</h3>
+                  <p className="text-gray-700 mb-4">
+                    If you have any questions about our use of cookies or other technologies, please contact us at:
+                  </p>
+                  <p className="text-gray-700 mb-2">
+                    Email: <a href="mailto:info@digimindsglobal.tech" className="text-[#0176D3] hover:text-[#032D60] transition-colors">info@digimindsglobal.tech</a>
+                  </p>
+                  <p className="text-gray-700 mb-6">
+                    Phone: <a href="tel:+916304647593" className="text-[#0176D3] hover:text-[#032D60] transition-colors">+91 6304647593</a>
+                  </p>
+
+                  <p className="text-sm text-gray-500 mt-8">Last updated: May 15, 2024</p>
                 </motion.div>
 
                 {/* Types of Cookies */}
