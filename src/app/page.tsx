@@ -9,7 +9,7 @@ import { ChevronDownIcon } from "lucide-react";
 
 // Remove static imports and use only dynamic imports
 const TrustSignalsComponent = dynamic(() => 
-  import("@/components/ui/trust-signals").then(mod => mod.TrustSignals), 
+  import("@/components/ui/trust-signals").then(mod => ({ default: mod.TrustSignals })), 
   {
     loading: () => <div className="animate-pulse bg-gray-200 h-40"></div>,
     ssr: false
@@ -17,7 +17,7 @@ const TrustSignalsComponent = dynamic(() =>
 )
 
 const AnimatedHeroComponent = dynamic(() => 
-  import("@/components/ui/animated-hero").then(mod => mod.AnimatedHero), 
+  import("@/components/ui/animated-hero").then(mod => ({ default: mod.AnimatedHero })), 
   {
     loading: () => <div className="animate-pulse bg-gray-200 h-96"></div>,
     ssr: false

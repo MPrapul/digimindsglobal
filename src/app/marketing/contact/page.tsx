@@ -9,7 +9,6 @@ import { Label } from '@/components/ui/label'
 import { Mail, Phone, MapPin, Send, User, ArrowRight, CheckCircle2, Calendar, MessageSquare, Search, ChevronsUpDown, Check } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { supabase } from '@/lib/supabase'
-import { sendContactConfirmationEmail, sendNewsletterWelcomeEmail } from '@/lib/resend'
 import { useGlobalChatState } from '@/lib/chat-state'
 import { useSearchParams } from 'next/navigation'
 import { cn } from '@/lib/utils'
@@ -137,15 +136,24 @@ function ContactForm() {
         throw new Error(submitError.message)
       }
 
-      // Send confirmation email
-      const { success: emailSuccess, error: emailError } = await sendContactConfirmationEmail({
-        name: formData.name,
-        email: formData.email,
-        message: formData.message
-      })
+      // Send email via our API route
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          type: 'contact'
+        })
+      });
 
-      if (!emailSuccess && emailError) {
-        console.warn('Email sending error:', emailError)
+      const data = await response.json();
+      
+      if (!response.ok) {
+        console.warn('Email sending error:', data.error);
         // Continue with success even if email fails
       }
 
@@ -198,13 +206,22 @@ function ContactForm() {
         throw new Error('Failed to subscribe. Please try again.')
       }
 
-      // Send welcome email
-      const { success: emailSuccess, error: emailError } = await sendNewsletterWelcomeEmail({
-        email: newsletterEmail
-      })
+      // Send email via our API route
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: newsletterEmail,
+          type: 'newsletter'
+        })
+      });
 
-      if (!emailSuccess && emailError) {
-        console.warn('Newsletter email sending error:', emailError)
+      const data = await response.json();
+      
+      if (!response.ok) {
+        console.warn('Newsletter email sending error:', data.error);
         // Continue with success even if email fails
       }
 
