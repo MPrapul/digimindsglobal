@@ -19,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <head>
+        <meta name="google-site-verification" content="-a3TLmcreS5WNqaQXsrvLpvQGTS2KOZ9ZIIAU6pMSV4" />
         <link rel="icon" href="/images/DigimindglobalFav.png" />
         <link rel="shortcut icon" href="/images/DigimindglobalFav.png" />
         <link rel="apple-touch-icon" href="/images/DigimindglobalFav.png" />
