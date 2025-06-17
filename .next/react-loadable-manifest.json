@@ -1,17 +1,14 @@
 {
   "app/page.tsx -> @/components/ui/animated-hero": {
-    "id": 9712,
+    "id": "app/page.tsx -> @/components/ui/animated-hero",
     "files": [
-      "static/chunks/5828-31d39933f75825b8.js",
-      "static/chunks/9352-5be663ee15b16b23.js",
-      "static/chunks/8629.91edb42d1ca9c348.js",
-      "static/chunks/9712.3ee1785079022f3d.js"
+      "static/chunks/_app-pages-browser_src_components_ui_animated-hero_tsx.js"
     ]
   },
   "app/page.tsx -> @/components/ui/trust-signals": {
-    "id": 2545,
+    "id": "app/page.tsx -> @/components/ui/trust-signals",
     "files": [
-      "static/chunks/2545.92b458b767149a70.js"
+      "static/chunks/_app-pages-browser_src_components_ui_trust-signals_tsx.js"
     ]
   }
 }

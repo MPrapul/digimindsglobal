@@ -99,91 +99,58 @@ export default function ERPSolutionsPage() {
   return (
     <div className="flex flex-col items-center w-full pt-20">
       {/* Hero Banner Section - Enhanced */}
-      <section className="relative min-h-[700px] w-full overflow-hidden">
-        {/* Background Elements with Enhanced Gradient */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/services-hero.jpg"
-            alt="ERP Solutions"
-            fill
-            className="object-cover transition-transform duration-10000 hover:scale-105 brightness-[0.3]"
-            priority
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#032D60]/95 via-[#0176D3]/90 to-[#1589ee]/80 backdrop-blur-[2px]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-        </div>
-        
-        {/* Content */}
-        <div className="container relative z-10 flex min-h-[700px] flex-col items-center justify-center text-center text-white mx-auto px-6 sm:px-8 lg:px-12">
-          <motion.h1 
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mb-8 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-center max-w-6xl mx-auto leading-[1.1] drop-shadow-2xl"
-          >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#AACBFF] to-[#1589EE] font-extrabold">
-              Attendance Tracking & Campus Management
-            </span>
-          </motion.h1>
-          
-          <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-12 max-w-4xl text-lg sm:text-xl lg:text-2xl text-white/95 text-center mx-auto leading-relaxed"
-          >
-            Digiminds ERP enables smart attendance, administration, academic scheduling, reporting, and real-time performance insights.
-          </motion.p>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-6 items-center mb-8"
-          >
-            <Button 
-              size="lg" 
-              className="bg-white text-[#032D60] hover:bg-gray-100 hover:scale-105 px-10 py-4 text-lg font-semibold rounded-xl shadow-lg transition-all duration-300"
+      <section className="relative min-h-[700px] w-full overflow-hidden bg-gradient-to-br from-[#032D60]/95 via-[#0176D3]/90 to-[#1589ee]/80">
+        <div className="container relative z-10 flex flex-col-reverse lg:flex-row min-h-[700px] items-center justify-between mx-auto px-6 sm:px-8 lg:px-12 py-12 gap-12">
+          {/* Left: Text Content */}
+          <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left text-white">
+            <motion.h1 
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="mb-8 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl max-w-6xl leading-[1.1] drop-shadow-2xl"
             >
-              Request Demo
-            </Button>
-            <p className="text-white/85 text-base bg-white/10 px-4 py-2 rounded-lg backdrop-blur-sm">
-              Login credentials: demo@digiminds.com / demo123
-            </p>
-          </motion.div>
-
-          {/* Mobile App Preview */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-16 relative"
-          >
-            <div className="relative w-64 h-96 mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/10 rounded-3xl backdrop-blur-sm border border-white/30">
-                <div className="p-4 h-full flex flex-col justify-center items-center">
-                  <div className="w-full h-16 bg-[#032D60] rounded-xl mb-4 flex items-center justify-center">
-                    <span className="text-white font-bold">Digiminds ERP</span>
-                  </div>
-                  <div className="grid grid-cols-2 gap-3 w-full">
-                    <div className="h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                      <span className="text-white text-xs">Attendance</span>
-                    </div>
-                    <div className="h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                      <span className="text-white text-xs">Reports</span>
-                    </div>
-                    <div className="h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                      <span className="text-white text-xs">Schedule</span>
-                    </div>
-                    <div className="h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                      <span className="text-white text-xs">Messages</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#AACBFF] to-[#1589EE] font-extrabold">
+                Attendance Tracking & Campus Management
+              </span>
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mb-12 max-w-4xl text-lg sm:text-xl lg:text-2xl text-white/95 leading-relaxed"
+            >
+              Digiminds ERP enables smart attendance, administration, academic scheduling, reporting, and real-time performance insights.
+            </motion.p>
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-6 items-center mb-8"
+            >
+              <Link href="/contact">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-[#032D60] hover:bg-gray-100 hover:scale-105 px-10 py-4 text-lg font-semibold rounded-xl shadow-lg transition-all duration-300"
+                >
+                  Request Demo
+                </Button>
+              </Link>
+            </motion.div>
+          </div>
+          {/* Right: Placeholder Image */}
+          <div className="flex-1 flex justify-center items-center mb-12 lg:mb-0">
+            <div className="w-[300px] h-[200px] sm:w-[400px] sm:h-[266px] md:w-[500px] md:h-[333px] lg:w-[600px] lg:h-[400px] bg-white/10 rounded-2xl flex items-center justify-center border-2 border-white/20 shadow-lg">
+              <Image
+                src="/images/companies/erp-hero-dashboard.png"
+                alt="Modern dashboard-style campus management interface"
+                width={600}
+                height={400}
+                className="object-contain rounded-xl"
+                data-testid="hero-dashboard-placeholder"
+                priority
+              />
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -208,7 +175,6 @@ export default function ERPSolutionsPage() {
             >
               Anywhere, Anytime
             </motion.p>
-
             <motion.div 
               variants={fadeInUp}
               className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-20"
@@ -222,7 +188,6 @@ export default function ERPSolutionsPage() {
                 Download on App Store
               </Button>
             </motion.div>
-
             {/* Platform Screenshots - Enhanced */}
             <motion.div 
               variants={fadeInUp}
@@ -256,78 +221,6 @@ export default function ERPSolutionsPage() {
                 <p className="text-gray-600 text-base leading-relaxed">Full-featured web application for desktop</p>
               </motion.div>
             </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Partners Section */}
-      <section className="py-12 w-full bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-2xl font-bold mb-8 text-[#032D60]"
-          >
-            Our Technology Partners
-          </motion.h2>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex justify-center items-center gap-12 opacity-70"
-          >
-            <Image src="/images/salesforce-astro.png" alt="Salesforce" width={120} height={60} className="h-12 w-auto" />
-            <Image src="/images/hubspot.png" alt="HubSpot" width={120} height={60} className="h-12 w-auto" />
-            <Image src="/images/braze.png" alt="Braze" width={120} height={60} className="h-12 w-auto" />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Technology Advances Section - Enhanced */}
-      <section className="py-20 w-full bg-gradient-to-br from-[#032D60] to-[#0176D3]">
-        <div className="container mx-auto px-6">
-          <motion.h2 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-white"
-          >
-            Institutions Adopt Digiminds ERP to Transform
-          </motion.h2>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="max-w-5xl mx-auto"
-          >
-            <div className="bg-yellow-400 rounded-3xl p-10 text-black shadow-2xl border-4 border-yellow-300">
-              <ul className="space-y-6 text-xl font-medium">
-                <li className="flex items-start">
-                  <span className="mr-4 text-3xl font-bold text-yellow-700">•</span>
-                  <span className="leading-relaxed">Automate routine tasks</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-4 text-3xl font-bold text-yellow-700">•</span>
-                  <span className="leading-relaxed">Go paperless with digital records</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-4 text-3xl font-bold text-yellow-700">•</span>
-                  <span className="leading-relaxed">Improve faculty and student experience</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-4 text-3xl font-bold text-yellow-700">•</span>
-                  <span className="leading-relaxed">Enable mobile-first administration</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-4 text-3xl font-bold text-yellow-700">•</span>
-                  <span className="leading-relaxed">Scalable for any institution size</span>
-                </li>
-              </ul>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -411,68 +304,168 @@ export default function ERPSolutionsPage() {
         </div>
       </section>
 
-      {/* Platform Demo Display */}
-      <section className="py-16 w-full bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+      {/* Platform Demo Display Section - Moved and Renamed */}
+      <section className="py-20 w-full bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="container mx-auto px-6 text-center">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            className="text-center mb-12"
+            variants={staggerContainer}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#032D60]">
+            <motion.h2 
+              variants={fadeInUp}
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[#032D60]"
+            >
               Platform Demo Display
-            </h2>
-            <p className="text-lg text-gray-700 mb-8">
+            </motion.h2>
+            <motion.p 
+              variants={fadeInUp}
+              className="text-xl md:text-2xl text-gray-600 mb-16"
+            >
               Fully customizable ERP tailored for institutions
-            </p>
-          </motion.div>
-
-          {/* Platform Tabs */}
-          <div className="flex justify-center mb-8">
-            <div className="bg-white rounded-lg p-1 shadow-sm border">
-              {[
-                { id: 'web', label: 'Web Platform', icon: ComputerDesktopIcon },
-                { id: 'mobile', label: 'Mobile App', icon: DevicePhoneMobileIcon },
-                { id: 'tablet', label: 'Tablet View', icon: DeviceTabletIcon }
-              ].map((tab) => (
+            </motion.p>
+            {/* Tabbed Demo Display */}
+            <div className="max-w-3xl mx-auto">
+              <div className="flex justify-center gap-4 mb-8" role="tablist" aria-label="Platform Demo Tabs">
                 <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-2 px-6 py-3 rounded-md transition-all ${
-                    activeTab === tab.id 
-                      ? 'bg-[#032D60] text-white' 
-                      : 'text-gray-600 hover:bg-gray-100'
-                  }`}
+                  className={`px-6 py-3 rounded-t-lg font-semibold text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#032D60] transition-all duration-200 ${activeTab === 'web' ? 'bg-white text-[#032D60] shadow' : 'bg-gray-200 text-gray-500'}`}
+                  onClick={() => setActiveTab('web')}
+                  aria-selected={activeTab === 'web'}
+                  aria-controls="demo-tabpanel-web"
+                  id="demo-tab-web"
+                  role="tab"
+                  tabIndex={0}
+                  data-testid="tab-web"
                 >
-                  <tab.icon className="w-5 h-5" />
-                  {tab.label}
+                  Web Version
                 </button>
-              ))}
+                <button
+                  className={`px-6 py-3 rounded-t-lg font-semibold text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#032D60] transition-all duration-200 ${activeTab === 'tablet' ? 'bg-white text-[#032D60] shadow' : 'bg-gray-200 text-gray-500'}`}
+                  onClick={() => setActiveTab('tablet')}
+                  aria-selected={activeTab === 'tablet'}
+                  aria-controls="demo-tabpanel-tablet"
+                  id="demo-tab-tablet"
+                  role="tab"
+                  tabIndex={0}
+                  data-testid="tab-tablet"
+                >
+                  Tablet View
+                </button>
+                <button
+                  className={`px-6 py-3 rounded-t-lg font-semibold text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#032D60] transition-all duration-200 ${activeTab === 'mobile' ? 'bg-white text-[#032D60] shadow' : 'bg-gray-200 text-gray-500'}`}
+                  onClick={() => setActiveTab('mobile')}
+                  aria-selected={activeTab === 'mobile'}
+                  aria-controls="demo-tabpanel-mobile"
+                  id="demo-tab-mobile"
+                  role="tab"
+                  tabIndex={0}
+                  data-testid="tab-mobile"
+                >
+                  Mobile View
+                </button>
+              </div>
+              <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] bg-white rounded-b-2xl shadow-lg flex items-center justify-center transition-all duration-500 md:h-[800px]" style={{ minHeight: 250 }}>
+                <div
+                  id="demo-tabpanel-web"
+                  role="tabpanel"
+                  aria-labelledby="demo-tab-web"
+                  hidden={activeTab !== 'web'}
+                  className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500 ${activeTab === 'web' ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
+                  data-testid="tabpanel-web"
+                >
+                  <Image
+                    src="/images/companies/erp-demo-web.png"
+                    alt="ERP dashboard web version"
+                    width={800}
+                    height={500}
+                    className="object-contain rounded-xl max-h-full"
+                    priority={activeTab === 'web'}
+                  />
+                </div>
+                <div
+                  id="demo-tabpanel-tablet"
+                  role="tabpanel"
+                  aria-labelledby="demo-tab-tablet"
+                  hidden={activeTab !== 'tablet'}
+                  className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500 ${activeTab === 'tablet' ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'} w-full h-full`}
+                  data-testid="tabpanel-tablet"
+                >
+                  <Image
+                    src="/images/companies/erp-demo-tablet.png"
+                    alt="ERP dashboard tablet version"
+                    width={600}
+                    height={900}
+                    className="object-contain rounded-xl max-h-full max-w-full"
+                    priority={activeTab === 'tablet'}
+                  />
+                </div>
+                <div
+                  id="demo-tabpanel-mobile"
+                  role="tabpanel"
+                  aria-labelledby="demo-tab-mobile"
+                  hidden={activeTab !== 'mobile'}
+                  className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500 ${activeTab === 'mobile' ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
+                  data-testid="tabpanel-mobile"
+                >
+                  <Image
+                    src="/images/companies/erp-demo-mobile.png"
+                    alt="ERP dashboard mobile version"
+                    width={300}
+                    height={600}
+                    className="object-contain rounded-xl max-h-full"
+                    priority={activeTab === 'mobile'}
+                  />
+                </div>
+              </div>
             </div>
-          </div>
+          </motion.div>
+        </div>
+      </section>
 
-          {/* Platform Preview */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+      {/* Technology Advances Section - Enhanced */}
+      <section className="py-20 w-full bg-gradient-to-br from-[#032D60] to-[#0176D3]">
+        <div className="container mx-auto px-6">
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-xl p-8 max-w-4xl mx-auto"
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-white"
           >
-            <div className="aspect-video bg-gradient-to-br from-[#032D60] to-[#0176D3] rounded-xl flex items-center justify-center">
-              <div className="text-center text-white">
-                <div className="text-6xl mb-4">
-                  {activeTab === 'web' && <ComputerDesktopIcon className="w-24 h-24 mx-auto" />}
-                  {activeTab === 'mobile' && <DevicePhoneMobileIcon className="w-24 h-24 mx-auto" />}
-                  {activeTab === 'tablet' && <DeviceTabletIcon className="w-24 h-24 mx-auto" />}
-                </div>
-                <h3 className="text-2xl font-bold mb-2">Digiminds ERP</h3>
-                <p className="text-white/80">
-                  {activeTab === 'web' && 'Full-featured web dashboard'}
-                  {activeTab === 'mobile' && 'Mobile-optimized interface'}
-                  {activeTab === 'tablet' && 'Tablet-ready experience'}
-                </p>
-              </div>
+            Institutions Adopt Digiminds ERP to Transform
+          </motion.h2>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="max-w-5xl mx-auto"
+          >
+            <div className="bg-yellow-400 rounded-3xl p-10 text-black shadow-2xl border-4 border-yellow-300">
+              <ul className="space-y-6 text-xl font-medium">
+                <li className="flex items-start">
+                  <span className="mr-4 text-3xl font-bold text-yellow-700">•</span>
+                  <span className="leading-relaxed">Automate routine tasks</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-4 text-3xl font-bold text-yellow-700">•</span>
+                  <span className="leading-relaxed">Go paperless with digital records</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-4 text-3xl font-bold text-yellow-700">•</span>
+                  <span className="leading-relaxed">Improve faculty and student experience</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-4 text-3xl font-bold text-yellow-700">•</span>
+                  <span className="leading-relaxed">Enable mobile-first administration</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-4 text-3xl font-bold text-yellow-700">•</span>
+                  <span className="leading-relaxed">Scalable for any institution size</span>
+                </li>
+              </ul>
             </div>
           </motion.div>
         </div>
@@ -805,12 +798,14 @@ export default function ERPSolutionsPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Button 
-                size="lg" 
-                className="bg-white text-[#032D60] hover:bg-gray-100 hover:scale-105 px-12 py-5 text-xl font-bold rounded-2xl shadow-2xl transition-all duration-300"
-              >
-                Schedule a Free Demo
-              </Button>
+              <Link href="/contact">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-[#032D60] hover:bg-gray-100 hover:scale-105 px-12 py-5 text-xl font-bold rounded-2xl shadow-2xl transition-all duration-300"
+                >
+                  Schedule a Free Demo
+                </Button>
+              </Link>
             </motion.div>
           </motion.div>
         </div>
