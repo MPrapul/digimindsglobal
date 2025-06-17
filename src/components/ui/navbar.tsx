@@ -39,6 +39,9 @@ export function Navbar() {
             <Link href="/careers" className="text-gray-700 hover:text-primary font-medium">
               Careers
             </Link>
+            <Link href="/erp-solutions" className="text-gray-700 hover:text-primary font-medium">
+              ERP Solutions
+            </Link>
             <Link
               href="/contact"
               className="bg-[#444a7d] hover:bg-[#363c64] text-white px-6 py-2.5 rounded-md transition-colors font-medium"
@@ -95,6 +98,13 @@ export function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Careers
+            </Link>
+            <Link 
+              href="/erp-solutions" 
+              className="text-gray-700 hover:text-primary py-2 font-medium"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              ERP Solutions
             </Link>
             <Link
               href="/contact"
